@@ -1,16 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './Landing/LandingPage';
+import React from "react";
+import StudentLogin from "./pages/StudentLogin/StudentLogin";
 
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
-                {/* Add routes for other modules */}
-            </Routes>
-        </Router>
-    );
+  return (
+    <div>
+      <StudentLogin />
+    </div>
+  );
 }
 
 export default App;
