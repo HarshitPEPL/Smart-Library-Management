@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "./StudentLogin.css";
 
 const StudentLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,31 +17,23 @@ const StudentLogin = () => {
   };
 
   return (
-
-
-    
     <div className="studentlogin-wrapper">
-        
       <div className="studentlogin-left">
-      <img
-        src="/studentlogin.png"
-        alt="Books and Learning"
-        className="studentlogin-image"
-      />
-
+        <img
+          src="/studentlogin.png"
+          alt="Books and Learning"
+          className="studentlogin-image"
+        />
       </div>
       <div className="studentlogin-right">
-
-        {/* logo of image */}
-
         <img
-            src="/logo.png"
-            alt="Logo"
-            className="studentlogin-logo-image"
-        />  
-              <p className="studentlogin-subtitle">Welcome Teacher, Please enter your details</p>
-              <p2 className="studentlogin-subsubtitle">Sign in to continue to your Digital Library</p2>
-              <form className="studentlogin-form" onSubmit={handleLogin}>
+          src="/logo.png"
+          alt="Logo"
+          className="studentlogin-logo-image"
+        />
+        <p className="studentlogin-subtitle">Welcome Teacher, Please enter your details</p>
+        <p className="studentlogin-subsubtitle">Sign in to continue to your Digital Library</p>
+        <form className="studentlogin-form" onSubmit={handleLogin}>
           <div className="studentlogin-field">
             <label htmlFor="username" className="studentlogin-label">Username</label>
             <input
@@ -71,14 +65,14 @@ const StudentLogin = () => {
               />
               <span className="remember-text">Remember Me</span>
             </label>
-            <a href="#" className="studentlogin-forgot">Forgot Password?</a>
+            <Link to="/forgot-password" className="studentlogin-forgot">
+              Forgot Password?
+            </Link>
           </div>
           <button type="submit" className="studentlogin-button">Login</button>
         </form>
-        </div>
+      </div>
     </div>
-    
-    
   );
 };
 
