@@ -1,0 +1,93 @@
+.StudentSidebar {
+  width: 240px;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow-y: auto;
+  left: 15px;
+  top: 15px;
+}
+
+.StudentSidebar-logo {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.StudentSidebar-logoImage {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.StudentSidebar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 100px);
+  padding: 0rem 0;
+}
+
+.StudentSidebar-mainMenu,
+.StudentSidebar-footerMenu {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.StudentSidebar-navItem {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s ease;
+  gap: 1rem;
+}
+
+.StudentSidebar-navItem:hover {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.StudentSidebar-icon {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.StudentSidebar-navItem:hover .StudentSidebar-icon {
+  color: #1a1a1a;
+}
+
+.StudentSidebar-active {
+  background-color: #f0f7ff;
+  color: #339149;
+  font-weight: 500;
+}
+
+.StudentSidebar-active .StudentSidebar-icon {
+  color: #339149;
+}
+
+.StudentSidebar-footerMenu {
+  margin-top: auto;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+.StudentSidebar-footerItem {
+  padding: 0.5rem 1.5rem;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.StudentSidebar-footerItem:hover {
+  color: #1a1a1a;
+}

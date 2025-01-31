@@ -10,6 +10,9 @@ const StudentForget = () => {
     e.preventDefault();
     console.log("Reset password email:", email);
     // Add your password reset logic here
+    
+    // Navigate to the success page
+    navigate("/reset-requested");
   };
 
   const handleBackToLogin = () => {
@@ -33,25 +36,25 @@ const StudentForget = () => {
         />
         <h2 className="studentforget-title">Forgot Password?</h2>
         <p className="studentforget-subtitle">
-          No worries! Enter your email and we'll send you reset instructions.
+          No worries! Enter your username and we'll send the request
         </p>
         <form className="studentforget-form" onSubmit={handleSubmit}>
           <div className="studentforget-field">
-            <label htmlFor="email" className="studentforget-label">
-              Email address
+            <label htmlFor="username" className="studentforget-label">
+              Username
             </label>
             <input
-              type="email"
+              type="text"
               id="email"
               className="studentforget-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder="Enter your username"
               required
             />
           </div>
           <button type="submit" className="studentforget-button">
-            Send Reset Instructions
+            Send Reset Request
           </button>
           <button
             type="button"

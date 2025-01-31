@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
 import "./StudentLogin.css";
 
 const StudentLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -13,7 +15,21 @@ const StudentLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
     console.log("Remember Me:", rememberMe);
-    // Add your login logic here
+    
+    // Basic validation
+    if (username && password) {
+      // Add your authentication logic here if needed
+      
+      // Navigate to dashboard after successful login
+      navigate('/dashboard');
+    } else {
+      // You might want to add error handling here
+      alert("Please enter both username and password");
+    }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -47,14 +63,28 @@ const StudentLogin = () => {
           </div>
           <div className="studentlogin-field">
             <label htmlFor="password" className="studentlogin-label">Password</label>
-            <input
-              type="password"
-              id="password"
-              className="studentlogin-input"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-            />
+            <div className="password-input-wrapper">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                className="studentlogin-input"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+              />
+              <button
+                type="button"
+                className="password-toggle-button"
+                onClick={togglePasswordVisibility}
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? (
+                  <EyeOff size={20} className="password-toggle-icon" />
+                ) : (
+                  <Eye size={20} className="password-toggle-icon" />
+                )}
+              </button>
+            </div>
           </div>
           <div className="studentlogin-options">
             <label className="studentlogin-rememberme">

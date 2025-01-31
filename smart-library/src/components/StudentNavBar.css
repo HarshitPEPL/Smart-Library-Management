@@ -1,0 +1,167 @@
+.Student-Navbar-container {
+    background-color: white;
+    padding: 12px 12px;
+    border-bottom: 1px solid #eee;
+    position: absolute;
+    width: 99%;
+    top: 15px;
+    left: 15px;
+    
+  }
+  
+  .Student-Navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+    left: 8rem;
+  }
+  
+  .Student-Search-section {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 9999px;
+    padding: 4px;
+    gap: 8px;
+    width: 600px;
+  }
+  
+  .Student-Select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .Student-Category-select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 8px 32px 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .Student-Select-icon {
+    position: absolute;
+    right: 8px;
+    pointer-events: none;
+    color: #666;
+  }
+  
+  .Student-Search-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .Student-Search-input {
+    width: 100%;
+    padding: 8px 40px 8px 16px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .Student-Search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #22c55e;
+    cursor: pointer;
+  }
+  
+  .Student-Nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  
+  .Student-Nav-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 16px;
+    background-color: white;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+    position: relative;
+    right: 3rem;
+  }
+  
+  .Student-Nav-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .Student-Profile-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px 4px 4px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+    position: relative;
+    right: 1rem;
+  }
+  
+  .Student-Profile-button:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .Student-Profile-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .Student-Dropdown {
+    position: relative;
+    display:  inline-block;
+  }
+  
+  .Student-Dropdown-content {
+    display: none;
+    position: absolute;
+    top: 105%;
+    right: 20%;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  .Student-Dropdown:hover .Student-Dropdown-content {
+    display: block;
+  }
+  
+  .Student-Dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    text-align: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    
+  }
+  
+  .Student-Dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
