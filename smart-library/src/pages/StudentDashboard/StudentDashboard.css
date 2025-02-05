@@ -1,6 +1,458 @@
 .StudentDashboard {
-  min-height: 100vh;
+  min-height: 250vh;
   background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  position: relative;
+}
+
+.StudentDashboard-main {
+  position: absolute;
+  top: 80px;
+  left: 310px;
+  right: 0;
+  padding: 20px;
+}
+
+.StudentDashboard-container {
+  height: 10rem;
+  display: flex;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10 20px;
+}
+
+/* Announcements Card Styles */
+.StudentDashboard-announcements-card {
+  width: 450px;
+  right: 3.5rem;
+  min-width: 380px;
+  height: 160px;
+  background-color: #28a745;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.StudentDashboard-announcements-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+}
+
+.StudentDashboard-quote-container {
+  flex-grow: 1;
+}
+
+.StudentDashboard-quote {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.StudentDashboard-author {
+  text-align: right;
+  margin: 8px 0 0;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.StudentDashboard-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.StudentDashboard-dot {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.StudentDashboard-dot:first-child {
+  opacity: 1;
+}
+
+/* New Arrivals Card Styles */
+.StudentDashboard-newArrivals-card {
+  flex: 1;
+  width: 10px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  height: 160px;
+  right: 4rem;
+}
+
+.StudentDashboard-books-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  padding: 0 10px;
+  height: calc(160% - 50px);
+  width: 120%;
+  position: relative;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+.StudentDashboard-book {
+  position: relative;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(50, 179, 43, 0.251);
+  left: 4.5rem;
+}
+
+.StudentDashboard-book img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  position: relative;
+  left: 5px;
+  top: 7px;
+  border-radius: 8px;
+}
+
+.StudentDashboard-greeting {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  top: 14rem;
+  left: 3.5rem;
+  transform: translateX(-50%);
+  width: max-content;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* recommend section css */
+
+.StudentDashboard-recommended {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8rem;
+  position: relative;
+  right: 3rem;
+  bottom: 3rem;
+  width: 104%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Enable horizontal scroll if needed */
+  
+}
+
+.StudentDashboard-recommended-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.StudentDashboard-recommended-grid {
+  display: flex; /* Change to flex for horizontal layout */
+  gap: 30px;
+  padding: 10px;
+  min-width: min-content; /* Ensures all items are visible */
+}
+
+.StudentDashboard-recommended-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+  flex: 0 0 auto; /* Prevent books from shrinking */
+  width: 150px; /* Fixed width for each book */
+}
+
+.StudentDashboard-recommended-book:hover {
+  transform: translateY(-5px);
+}
+
+.StudentDashboard-recommended-book-image {
+  width: 120px; /* Slightly smaller to fit better in one line */
+  height: 160px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.StudentDashboard-recommended-book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.StudentDashboard-recommended-book-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0 4px 0;
+  line-height: 1.2;
+  width: 120px; /* Match image width */
+}
+
+.StudentDashboard-recommended-book-author {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  width: 120px; /* Match image width */
+}
+
+/* Add smooth scrolling */
+.StudentDashboard-recommended::-webkit-scrollbar {
+  height: 8px;
+}
+
+.StudentDashboard-recommended::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.StudentDashboard-recommended::-webkit-scrollbar-thumb {
+  background: #6e7871;
+  border-radius: 4px;
+}
+
+.StudentDashboard-recommended::-webkit-scrollbar-thumb:hover {
+  background: #343131;
+}
+
+
+/*Recent Reads css */
+
+.StudentDashboard-recent {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8rem;
+  position: relative;
+  right: 3rem;
+  bottom: 12rem;
+  width: calc(104%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.StudentDashboard-recent-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.StudentDashboard-recent-grid {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  min-width: min-content;
+}
+
+.StudentDashboard-recent-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+  flex: 0 0 auto;
+  width: 150px;
+}
+
+.StudentDashboard-recent-book:hover {
+  transform: translateY(-5px);
+}
+
+.StudentDashboard-recent-book-image {
+  width: 120px;
+  height: 160px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.StudentDashboard-recent-book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.StudentDashboard-recent-book-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0 4px 0;
+  line-height: 1.2;
+  width: 120px;
+}
+
+.StudentDashboard-recent-book-author {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  width: 120px;
+}
+
+/* Add smooth scrolling */
+.StudentDashboard-recent::-webkit-scrollbar {
+  height: 8px;
+}
+
+.StudentDashboard-recent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.StudentDashboard-recent::-webkit-scrollbar-thumb {
+  background: #6e7871;
+  border-radius: 4px;
+}
+
+.StudentDashboard-recent::-webkit-scrollbar-thumb:hover {
+  background: #343131;
+}
+
+/* Academic books section */
+
+
+.StudentDashboard-academicbook {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8rem;
+  position: relative;
+  right: 3rem;
+  bottom: 21rem;
+  width: calc(104%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.StudentDashboard-academicbook-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.StudentDashboard-academicbook-grid {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  min-width: min-content;
+}
+
+.StudentDashboard-academic-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+  flex: 0 0 auto;
+  width: 150px;
+}
+
+.StudentDashboard-academic-book:hover {
+  transform: translateY(-5px);
+}
+
+.StudentDashboard-academic-book-image {
+  width: 120px;
+  height: 160px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.StudentDashboard-academic-book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.StudentDashboard-academic-book-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0 4px 0;
+  line-height: 1.2;
+  width: 120px;
+}
+
+.StudentDashboard-academic-book-author {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  width: 120px;
+}
+
+/* Add smooth scrolling */
+.StudentDashboard-academicbook::-webkit-scrollbar {
+  height: 8px;
+}
+
+.StudentDashboard-academicbook::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.StudentDashboard-academicbook::-webkit-scrollbar-thumb {
+  background: #6e7871;
+  border-radius: 4px;
+}
+
+.StudentDashboard-academicbook::-webkit-scrollbar-thumb:hover {
+  background: #343131;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .StudentDashboard-container {
+    padding: 0 10px;
+  }
+  
+  .StudentDashboard-announcements-card {
+    width: 340px;
+    min-width: 340px;
+  }
+
+  .StudentDashboard-greeting {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .StudentDashboard-container {
+    padding: 0 40px;
+  }
 }

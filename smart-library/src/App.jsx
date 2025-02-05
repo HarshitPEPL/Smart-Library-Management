@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import StudentLogin from "./pages/StudentLogin/StudentLogin";
@@ -13,8 +12,10 @@ function App() {
         <Route path="/login" element={<StudentLogin />} />
         <Route path="/forgot-password" element={<StudentForget />} />
         <Route path="/reset-requested" element={<StudentForgetRequested />} />
-        <Route path="/dashboard" element={<StudentDashboard />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/student-login" element={<StudentLogin />} />
       </Routes>
     </Router>
   );

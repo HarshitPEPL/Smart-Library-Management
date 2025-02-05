@@ -8,7 +8,7 @@ const StudentSidebar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { label: 'Dashboard', path: '/dashboard', icon: <Home size={20} /> },
+    { label: 'Dashboard', path: '/student-dashboard', icon: <Home size={20} /> },
     { label: 'E-Books', path: '/e-books', icon: <Book size={20} /> },
     { label: 'Audio Books', path: '/audio-books', icon: <Headphones size={20} /> },
     { label: 'Visual Content', path: '/visual-content', icon: <MonitorPlay size={20} /> },

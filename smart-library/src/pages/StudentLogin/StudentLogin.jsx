@@ -21,7 +21,7 @@ const StudentLogin = () => {
       // Add your authentication logic here if needed
       
       // Navigate to dashboard after successful login
-      navigate('/dashboard');
+      navigate('/student-dashboard');
     } else {
       // You might want to add error handling here
       alert("Please enter both username and password");
@@ -47,7 +47,7 @@ const StudentLogin = () => {
           alt="Logo"
           className="studentlogin-logo-image"
         />
-        <p className="studentlogin-subtitle">Welcome Teacher, Please enter your details</p>
+        <p className="studentlogin-subtitle">Welcome Student, Please enter your details</p>
         <p className="studentlogin-subsubtitle">Sign in to continue to your Digital Library</p>
         <form className="studentlogin-form" onSubmit={handleLogin}>
           <div className="studentlogin-field">
