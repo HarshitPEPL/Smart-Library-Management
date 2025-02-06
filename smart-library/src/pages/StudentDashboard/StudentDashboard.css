@@ -1,11 +1,13 @@
 .StudentDashboard {
-  min-height: 250vh;
+  min-height: 240vh; /* Just viewport height */
   background: linear-gradient(45deg, #EFFAF1, #7ecb89);
   position: relative;
+  padding-bottom: 0rem; /* Add small padding at bottom */
 }
 
 .StudentDashboard-main {
   position: absolute;
+  min-height: 100vh;
   top: 80px;
   left: 310px;
   right: 0;
@@ -20,6 +22,8 @@
   margin: 0 auto;
   padding: 10 20px;
 }
+
+
 
 /* Announcements Card Styles */
 .StudentDashboard-announcements-card {
@@ -150,10 +154,8 @@
   bottom: 3rem;
   width: 104%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-x: auto; /* Enable horizontal scroll if needed */
-  
+  overflow-x: auto;
 }
-
 .StudentDashboard-recommended-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -161,8 +163,9 @@
   margin-bottom: 20px;
   padding-left: 10px;
   position: sticky;
-  left: 0;
+  margin-left: 1rem;
   top: 0;
+  left: 0;
 }
 
 .StudentDashboard-recommended-grid {
@@ -219,22 +222,15 @@
 }
 
 /* Add smooth scrolling */
+.StudentDashboard-recommended {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .StudentDashboard-recommended::-webkit-scrollbar {
-  height: 8px;
-}
-
-.StudentDashboard-recommended::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.StudentDashboard-recommended::-webkit-scrollbar-thumb {
-  background: #6e7871;
-  border-radius: 4px;
-}
-
-.StudentDashboard-recommended::-webkit-scrollbar-thumb:hover {
-  background: #343131;
+  display: none;
 }
 
 
@@ -247,10 +243,11 @@
   margin-top: 8rem;
   position: relative;
   right: 3rem;
-  bottom: 12rem;
-  width: calc(104%);
+  bottom: 12rem;    /* Keep this as original */
+  width: 104%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
+  margin-bottom: -12rem; /* Add this to compensate for the bottom positioning */
 }
 
 .StudentDashboard-recent-title {
@@ -260,8 +257,9 @@
   margin-bottom: 20px;
   padding-left: 10px;
   position: sticky;
-  left: 0;
+  margin-left: 1rem;
   top: 0;
+  left: 0;
 }
 
 .StudentDashboard-recent-grid {
@@ -318,22 +316,15 @@
 }
 
 /* Add smooth scrolling */
+.StudentDashboard-recent {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .StudentDashboard-recent::-webkit-scrollbar {
-  height: 8px;
-}
-
-.StudentDashboard-recent::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.StudentDashboard-recent::-webkit-scrollbar-thumb {
-  background: #6e7871;
-  border-radius: 4px;
-}
-
-.StudentDashboard-recent::-webkit-scrollbar-thumb:hover {
-  background: #343131;
+  display: none;
 }
 
 /* Academic books section */
@@ -346,10 +337,11 @@
   margin-top: 8rem;
   position: relative;
   right: 3rem;
-  bottom: 21rem;
-  width: calc(104%);
+  bottom: 9rem;    /* Keep this as original */
+  width: 104%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
+  margin-bottom: -12rem; /* Add this to compensate for the bottom positioning */
 }
 
 .StudentDashboard-academicbook-title {
@@ -359,6 +351,7 @@
   margin-bottom: 20px;
   padding-left: 10px;
   position: sticky;
+  margin-left: 1rem;
   top: 0;
   left: 0;
 }
@@ -417,23 +410,115 @@
 }
 
 /* Add smooth scrolling */
+.StudentDashboard-academicbook {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .StudentDashboard-academicbook::-webkit-scrollbar {
-  height: 8px;
+  display: none;
 }
 
-.StudentDashboard-academicbook::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
+
+/* Non Academic Book css */
+
+
+.StudentDashboard-nonacademicbook {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8rem;
+  position: relative;
+  right: 3rem;
+  bottom: 6rem;    /* Keep this as original */
+  width: 104%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: -12rem; /* Add this to compensate for the bottom positioning */
 }
 
-.StudentDashboard-academicbook::-webkit-scrollbar-thumb {
-  background: #6e7871;
-  border-radius: 4px;
+.StudentDashboard-nonacademicbook-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  position: sticky;
+  margin-left: 1rem;
+  top: 0;
+  left: 0;
 }
 
-.StudentDashboard-academicbook::-webkit-scrollbar-thumb:hover {
-  background: #343131;
+.StudentDashboard-nonacademicbook-grid {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  min-width: min-content;
 }
+
+.StudentDashboard-nonacademic-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+  flex: 0 0 auto;
+  width: 150px;
+}
+
+.StudentDashboard-nonacademic-book:hover {
+  transform: translateY(-5px);
+}
+
+.StudentDashboard-nonacademic-book-image {
+  width: 120px;
+  height: 160px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.StudentDashboard-nonacademic-book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.StudentDashboard-nonacademic-book-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0 4px 0;
+  line-height: 1.2;
+  width: 120px;
+}
+
+.StudentDashboard-nonacademic-book-author {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  width: 120px;
+}
+
+/* Add smooth scrolling */
+.StudentDashboard-nonacademicbook {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.StudentDashboard-nonacademicbook::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {

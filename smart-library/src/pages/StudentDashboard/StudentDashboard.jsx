@@ -226,10 +226,66 @@ const academicbooks = [
     author: "A.L. Basham"
   }
 ];
+
+const nonacademicbooks = [
+  { 
+    id: 1, 
+    image: "/Thinking.png", 
+    title: "A Brief History of Time", 
+    author: "Stephen Hawking"
+  },
+  { 
+    id: 2, 
+    image: "/Sapiens.png", 
+    title: "The Selfish Gene", 
+    author: "Richard Dawkins"
+  },
+  { 
+    id: 3, 
+    image: "/Start.png", 
+    title: "Introduction to the Theory of Computation", 
+    author: "Michael Sipser"
+  },
+  { 
+    id: 4, 
+    image: "/GoodToGreat.png", 
+    title: "The Wealth of Nations", 
+    author: "Adam Smith"
+  },
+  { 
+    id: 5, 
+    image: "/Outliers.png", 
+    title: "The Elegant Universe", 
+    author: "Brian Greene"
+  },
+  { 
+    id: 6, 
+    image: "/ZeroToOne.png", 
+    title: "Flatland: A Romance of Many Dimensions", 
+    author: "Edwin A. Abbott"
+  },
+  { 
+    id: 7, 
+    image: "/PowerOfNow.png", 
+    title: "The Gita for Children", 
+    author: "Roopa Pai"
+  },
+  { 
+    id: 8, 
+    image: "/4HourWork.png", 
+    title: "The Wonder That Was India", 
+    author: "A.L. Basham"
+  }
+];
+
+
+
+
   return (
     <div className="StudentDashboard">
       <StudentNavBar />
       <StudentSideBar />
+      
       <div className="StudentDashboard-main">
         <div className="StudentDashboard-container">
           {/* Announcements Card */}
@@ -298,9 +354,9 @@ const academicbooks = [
          </div>
         </div>
 
-        {/* Acadamic Book Section */}
+         {/* Acadamic Book Section */}
 
-        <div className="StudentDashboard-academicbook">
+         <div className="StudentDashboard-academicbook">
           <h2 className="StudentDashboard-academicbook-title">Academic Books</h2>
          <div className="StudentDashboard-academicbook-grid">
           {academicbooks.map((book) => (
@@ -314,6 +370,26 @@ const academicbooks = [
           ))}
          </div>
         </div>
+
+            {/* Non-Academic Book Section*/}
+        <div className="StudentDashboard-nonacademicbook">
+          <h2 className="StudentDashboard-nonacademicbook-title">Non-Academic Books</h2>
+         <div className="StudentDashboard-nonacademicbook-grid">
+          {academicbooks.map((book) => (
+            <div key={book.id} className="StudentDashboard-nonacademic-book">
+              <div className="StudentDashboard-nonacademic-book-image">
+                <img src={book.image} alt={book.title} />
+              </div>
+              <h3 className="StudentDashboard-nonacademic-book-title">{book.title}</h3>
+              <p className="StudentDashboard-nonacademic-book-author">{book.author}</p>
+            </div>
+          ))}
+         </div>
+        </div>  
+
+
+
+
       </div>
     </div>
   );

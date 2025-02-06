@@ -146,9 +146,6 @@ const StudentNavBar = () => {
               Browse <ChevronDown size={16} />
             </button>
             <div className="Student-Dropdown-content">
-              <button className="Student-Dropdown-item">Categories</button>
-              <button className="Student-Dropdown-item">Author</button>
-              <button className="Student-Dropdown-item">Format</button>
               <button className='Student-Dropdown-item'>Academic</button>
               <button className='Student-Dropdown-item'>Non-Academic</button>
             </div>
