@@ -4,19 +4,19 @@ import { Home, Book, Headphones, MonitorPlay, FileText, Bell, Library, Users, Bo
 import './StudentSidebar.css';
 
 const StudentSidebar = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate();  
   const location = useLocation();
 
   const menuItems = [
     { label: 'Dashboard', path: '/student-dashboard', icon: <Home size={20} /> },
-    { label: 'E-Books', path: '/e-books', icon: <Book size={20} /> },
-    { label: 'Audio Books', path: '/audio-books', icon: <Headphones size={20} /> },
-    { label: 'Visual Content', path: '/visual-content', icon: <MonitorPlay size={20} /> },
-    { label: 'Notes', path: '/notes', icon: <FileText size={20} /> },
-    { label: 'Announcements', path: '/announcements', icon: <Bell size={20} /> },
-    { label: 'Catalogue', path: '/catalogue', icon: <Library size={20} /> },
-    { label: 'Our Legends', path: '/legends', icon: <Users size={20} /> },
-    { label: 'Wishlist', path: '/wishlist', icon: <BookMarked size={20} /> }
+    { label: 'E-Books', path: '/student-e-books', icon: <Book size={20} /> },
+    { label: 'Audio Books', path: '/student-audio-books', icon: <Headphones size={20} /> },
+    { label: 'Visual Content', path: '/student-visual-content', icon: <MonitorPlay size={20} /> },
+    { label: 'Notes', path: '/student-notes', icon: <FileText size={20} /> },
+    { label: 'Announcements', path: '/student-announcements', icon: <Bell size={20} /> },
+    { label: 'Catalogue', path: '/student-catalogue', icon: <Library size={20} /> },
+    { label: 'Our Legends', path: '/student-legends', icon: <Users size={20} /> },
+    { label: 'Wishlist', path: '/student-wishlist', icon: <BookMarked size={20} /> }
   ];
 
   const footerItems = [

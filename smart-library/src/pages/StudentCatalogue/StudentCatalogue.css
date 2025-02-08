@@ -1,0 +1,12 @@
+.Student-catalogue-layout {
+    min-height: 240vh; /* Just viewport height */
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+    position: relative;
+    padding-bottom: 0rem;
+  }
+  
+
+  .Student-catalogue-container {
+    padding: 2rem;
+    flex: 1;
+  }

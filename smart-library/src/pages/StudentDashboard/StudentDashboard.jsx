@@ -179,49 +179,49 @@ const StudentDashboard = () => {
 const academicbooks = [
   { 
     id: 1, 
-    image: "/Thinking.png", 
+    image: "/ABriefHistory.png", 
     title: "A Brief History of Time", 
     author: "Stephen Hawking"
   },
   { 
     id: 2, 
-    image: "/Sapiens.png", 
+    image: "/TheSelfishGene.png", 
     title: "The Selfish Gene", 
     author: "Richard Dawkins"
   },
   { 
     id: 3, 
-    image: "/Start.png", 
+    image: "/IntroductionToTheTheoryOfComputation.png", 
     title: "Introduction to the Theory of Computation", 
     author: "Michael Sipser"
   },
   { 
     id: 4, 
-    image: "/GoodToGreat.png", 
+    image: "/TheWealthOfNation.png", 
     title: "The Wealth of Nations", 
     author: "Adam Smith"
   },
   { 
     id: 5, 
-    image: "/Outliers.png", 
+    image: "/TheElegantUniverse.png", 
     title: "The Elegant Universe", 
     author: "Brian Greene"
   },
   { 
     id: 6, 
-    image: "/ZeroToOne.png", 
+    image: "/Flatland.png", 
     title: "Flatland: A Romance of Many Dimensions", 
     author: "Edwin A. Abbott"
   },
   { 
     id: 7, 
-    image: "/PowerOfNow.png", 
+    image: "/TheGitaForChildren.png", 
     title: "The Gita for Children", 
     author: "Roopa Pai"
   },
   { 
     id: 8, 
-    image: "/4HourWork.png", 
+    image: "/TheWonderThatWasIndia.png", 
     title: "The Wonder That Was India", 
     author: "A.L. Basham"
   }

@@ -1,0 +1,319 @@
+.Student-vc {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.Student-vc-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+.Student-vc-content {
+  padding: 2rem;
+  margin-top: 60px;
+}
+
+.Student-vc-header {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.Student-vc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.Student-vc-item {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
+}
+
+.Student-vc-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.Student-vc-title-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Student-vc-image {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Student-vc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.Student-vc-info h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.Student-vc-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.Student-vc-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Student-vc-category {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.Student-vc-formats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Student-vc-format {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.Student-vc-format.available {
+  color: #2ecc71;
+}
+
+.Student-vc-format.available::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+}
+
+.Student-vc-format.unavailable {
+  color: #e74c3c;
+}
+
+.Student-vc-format.unavailable::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+}
+
+.Student-vc-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Student-vc-wishlist-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  position: relative;
+  right: 5rem;
+}
+
+.Student-vc-wishlist-button:hover {
+  transform: scale(1.1);
+}
+
+.Student-vc-preview-button {
+  padding: 0.4rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  font-weight: 500;
+  position: relative;
+  right: 3rem;
+}
+
+.Student-vc-preview-button:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.Student-vc-wishlist-button.wishlisted {
+  color: #ff4747;
+}
+
+/* Header text alignment */
+.Student-vc-title-header {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.Student-vc-category-header {
+  text-align: left;
+}
+
+.Student-vc-format-header {
+  text-align: left;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.pagination-button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.pagination-button:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 1rem;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .Student-vc-main {
+    margin-left: 200px;
+  }
+  
+  .Student-vc-wishlist-button {
+    right: 3rem;
+  }
+  
+  .Student-vc-preview-button {
+    right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Student-vc-main {
+    margin-left: 0;
+  }
+  
+  .Student-vc-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .Student-vc-header {
+    display: none;
+  }
+  
+  .Student-vc-title-section {
+    justify-content: center;
+  }
+  
+  .Student-vc-categories,
+  .Student-vc-formats,
+  .Student-vc-actions {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .Student-vc-wishlist-button,
+  .Student-vc-preview-button {
+    right: 0;
+  }
+  
+  .Student-vc-content {
+    padding: 1rem;
+  }
+  
+  .pagination-controls {
+    flex-wrap: wrap;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .Student-vc-item,
+  .pagination-controls {
+    background-color: #2d2d2d;
+  }
+  
+  .Student-vc-info h3 {
+    color: #fff;
+  }
+  
+  .Student-vc-info p,
+  .Student-vc-category {
+    color: #ccc;
+  }
+  
+  .pagination-button {
+    background: #2d2d2d;
+    border-color: #444;
+    color: #fff;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background: #3d3d3d;
+  }
+  
+  .pagination-info {
+    color: #ccc;
+  }
+}

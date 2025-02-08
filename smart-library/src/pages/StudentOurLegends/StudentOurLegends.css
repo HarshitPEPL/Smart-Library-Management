@@ -1,0 +1,12 @@
+.StudentOurLegends-container {
+    min-height: 240vh; /* Just viewport height */
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+    position: relative;
+    padding-bottom: 0rem;
+  }
+  
+  
+  .StudentOurLegends-main {
+    flex: 1;
+    padding: 2rem;
+  }

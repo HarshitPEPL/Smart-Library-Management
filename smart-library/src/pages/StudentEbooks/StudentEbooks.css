@@ -1,0 +1,289 @@
+.Student-ebook {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.Student-ebook-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+}
+
+.Student-ebook-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  margin-top: 60px;
+}
+
+.Student-ebook-header {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.Student-ebook-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.Student-ebook-item {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.Student-ebook-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.Student-ebook-title-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Student-ebook-image {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Student-ebook-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.Student-ebook-info h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.Student-ebook-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.Student-ebook-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Student-ebook-category {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.Student-ebook-formats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Student-ebook-format {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.Student-ebook-format.available {
+  color: #2ecc71;
+}
+
+.Student-ebook-format.available::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+}
+
+.Student-ebook-format.unavailable {
+  color: #e74c3c;
+}
+
+.Student-ebook-format.unavailable::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+}
+
+.Student-ebook-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Student-ebook-wishlist-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  position: relative;
+  right: 5rem;
+}
+
+.Student-ebook-wishlist-button:hover {
+  transform: scale(1.1);
+}
+
+.Student-ebook-preview-button {
+  padding: 0.4rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  font-weight: 500;
+  position: relative;
+  right: 3rem;
+}
+
+.Student-ebook-preview-button:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.Student-ebook-wishlist-button.wishlisted {
+  color: #ff4747;
+}
+
+/* Header text alignment */
+.Student-ebook-title-header {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.Student-ebook-category-header {
+  text-align: left;
+}
+
+.Student-ebook-format-header {
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .Student-ebook-main {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Student-ebook-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .Student-ebook-header {
+    display: none;
+  }
+  
+  .Student-ebook-title-section {
+    justify-content: center;
+  }
+  
+  .Student-ebook-categories,
+  .Student-ebook-formats,
+  .Student-ebook-actions {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+
+/* PAGINATION CSS */
+
+/* Add these new styles to your existing CSS file */
+
+.Student-ebook-content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px);
+}
+
+.Student-ebook-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Pagination Styles */
+.Student-ebook-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: auto;
+  border-radius: 8px;
+}
+
+.pagination-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Update existing media query */
+@media (max-width: 768px) {
+  .Student-ebook-pagination {
+    margin-top: 1rem;
+    position: sticky;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,12 @@
+.StudentWishlist {
+    min-height: 240vh; /* Just viewport height */
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+    position: relative;
+    padding-bottom: 0rem;
+  }
+  
+  .StudentWishlist-content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+  }
