@@ -1,24 +1,198 @@
 .StudentAnnouncements {
-    min-height: 240vh; /* Just viewport height */
-    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
-    position: relative;
-    padding-bottom: 0rem;
-  }
-  
-  .StudentAnnouncements-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  position: relative;
+  padding-bottom: 0rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
   
   .StudentAnnouncements-content {
     padding: 20px;
     flex: 1;
     overflow-y: auto;
+    
+  }
+
+  .StudentAnnouncements-container {
+  padding: 2rem;
+  margin-left: 260px; /* For sidebar */
+  padding-top: 80px; /* Instead of margin-top, use padding-top for navbar */
+  position: relative;
+  top: 3rem;
+}
+  
+  .StudentAnnouncements-filterButtons {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
   }
   
-  .StudentAnnouncements h1 {
-    margin-bottom: 20px;
+  .StudentAnnouncements-filterBtn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .StudentAnnouncements-filterBtn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .StudentAnnouncements-filterBtn.StudentAnnouncements-active {
+    background-color: #339149;
+    color: white;
+  }
+  
+  .StudentAnnouncements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .StudentAnnouncements-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .StudentAnnouncements-importanceIndicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+  }
+  
+  .StudentAnnouncements-high {
+    background-color: #ff4444;
+  }
+  
+  .StudentAnnouncements-medium {
+    background-color: #ffbb33;
+  }
+  
+  .StudentAnnouncements-low {
+    background-color: #00C851;
+  }
+  
+  .StudentAnnouncements-card h3 {
+    margin: 0.5rem 0;
     color: #333;
+  }
+  
+  .StudentAnnouncements-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .StudentAnnouncements-detailBtn {
+    background-color: #339149;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .StudentAnnouncements-detailBtn:hover {
+    background-color: #2b7a3d;
+  }
+  
+  .StudentAnnouncements-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .StudentAnnouncements-pageBtn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .StudentAnnouncements-pageBtn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .StudentAnnouncements-pageBtn.StudentAnnouncements-active {
+    background-color: #339149;
+    color: white;
+    border-color: #339149;
+  }
+  
+  .StudentAnnouncements-modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .StudentAnnouncements-modal {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .StudentAnnouncements-closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .StudentAnnouncements-closeBtn:hover {
+    color: #333;
+  }
+  
+  .StudentAnnouncements-modal h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .StudentAnnouncements-modal p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .StudentAnnouncements-backBtn {
+    background-color: #339149;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .StudentAnnouncements-backBtn:hover {
+    background-color: #2b7a3d;
   }

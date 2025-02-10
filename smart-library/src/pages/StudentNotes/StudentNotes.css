@@ -1,19 +1,221 @@
 .StudentNotes-container {
-    min-height: 240vh; /* Just viewport height */
-    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
-    position: relative;
-    padding-bottom: 0rem;
-  }
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  position: relative;
+}
+
+.StudentNotes-main {
+  flex: 1;
+  margin-left: 240px; /* Adjust based on your sidebar width */
+}
+
+.StudentNotes-content {
+  padding: 2rem;
+  max-width: 1600px; /* Increased from 1275px */
+  margin: 0 auto;
+  margin-top: 3.5rem; /* Space for navbar */
+}
+
+.StudentNotes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.StudentNotes-title {
+  font-size: 1.9rem;
+  font-weight: bold;
+  position: relative;
+  left: 8.5rem;
   
-  .StudentNotes-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .StudentNotes-content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
+}
+
+.StudentNotes-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.StudentNotes-button {
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+  left: 8rem;
+
+}
+
+.StudentNotes-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.StudentNotes-table {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 77rem; /* Added to ensure table takes full width */
+  position: relative;
+  left: 8rem;
+  bottom: 2rem;
+}
+
+.StudentNotes-tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.StudentNotes-row {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.StudentNotes-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.StudentNotes-date {
+  font-weight: 500;
+}
+
+.StudentNotes-time {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.StudentNotes-title-text {
+  font-weight: 500;
+}
+
+.StudentNotes-course {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.StudentNotes-expand-column {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.StudentNotes-expand-button {
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.StudentNotes-expand-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.StudentNotes-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.StudentNotes-modal {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.StudentNotes-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.StudentNotes-modal-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.StudentNotes-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0.5rem;
+}
+
+.StudentNotes-modal-content {
+  padding: 1rem;
+}
+
+.StudentNotes-modal-info {
+  margin-bottom: 1rem;
+}
+
+.StudentNotes-modal-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.StudentNotes-modal-details {
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.StudentNotes-modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.StudentNotes-modal-ok {
+  padding: 0.5rem 2rem;
+  background-color: #424549;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.StudentNotes-modal-ok:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

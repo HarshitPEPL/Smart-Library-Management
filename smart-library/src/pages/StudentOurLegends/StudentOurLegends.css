@@ -1,12 +1,215 @@
-.StudentOurLegends-container {
-    min-height: 240vh; /* Just viewport height */
-    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
-    position: relative;
-    padding-bottom: 0rem;
+.StudentOurLegend {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.StudentOurLegend-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  overflow-x: hidden;
+}
+
+.StudentOurLegend-content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.StudentOurLegend-header {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) minmax(200px, 1fr) minmax(150px, 1fr);
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.StudentOurLegend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.StudentOurLegend-item {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) minmax(200px, 1fr) minmax(150px, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.StudentOurLegend-title-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.StudentOurLegend-image {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.StudentOurLegend-info h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.StudentOurLegend-info p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.StudentOurLegend-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.StudentOurLegend-category {
+  font-size: 0.8rem;
+  color: #444;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.StudentOurLegend-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  right: 2rem;
+  
+}
+
+.StudentOurLegend-wishlist-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  position: relative;
+  right: 5rem;
+}
+
+.StudentOurLegend-wishlist-button:hover {
+  transform: scale(1.1);
+}
+
+.StudentOurLegend-preview-button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.StudentOurLegend-preview-button:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Pagination Styles */
+.StudentOurLegend-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.StudentOurLegend-pagination-button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.StudentOurLegend-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.StudentOurLegend-pagination-button:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.StudentOurLegend-pagination-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .StudentOurLegend-main {
+    margin-left: 200px;
   }
   
-  
-  .StudentOurLegends-main {
-    flex: 1;
-    padding: 2rem;
+  .StudentOurLegend-item,
+  .StudentOurLegend-header {
+    grid-template-columns: minmax(250px, 2fr) minmax(150px, 1fr) minmax(120px, 1fr);
+    padding: 1rem;
   }
+}
+
+@media (max-width: 992px) {
+  .StudentOurLegend-item,
+  .StudentOurLegend-header {
+    grid-template-columns: minmax(200px, 2fr) minmax(120px, 1fr) minmax(100px, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .StudentOurLegend-main {
+    margin-left: 0;
+  }
+
+  .StudentOurLegend-header {
+    display: none;
+  }
+
+  .StudentOurLegend-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .StudentOurLegend-categories {
+    margin: 0.5rem 0;
+  }
+
+  .StudentOurLegend-actions {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+}
