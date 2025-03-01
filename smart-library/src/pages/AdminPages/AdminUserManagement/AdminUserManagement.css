@@ -1,0 +1,320 @@
+.admin-user-management-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.admin-user-management-main {
+  flex: 1;
+  padding: 15px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-left: 240px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  width: calc(100% - 240px);
+}
+
+.admin-user-management-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.admin-user-management-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.admin-user-management-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-user-management-tab {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.admin-user-management-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-user-management-tab.active {
+  background-color: #f5f7f9;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-user-management-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.admin-user-management-export,
+.admin-user-management-ticket {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.admin-user-management-export {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.admin-user-management-ticket {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.admin-user-management-export:hover {
+  background-color: #c8e6c9;
+}
+
+.admin-user-management-ticket:hover:not(.disabled) {
+  background-color: #c8e6c9;
+}
+
+.admin-user-management-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 35rem;
+  overflow-y: auto;
+}
+
+.admin-user-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-user-management-table th,
+.admin-user-management-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-user-management-table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-user-management-table th:hover {
+  background-color: #f0f0f0;
+}
+
+.admin-user-management-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.admin-user-management-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.admin-user-management-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.admin-user-management-table td.status {
+  width: auto;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px 12px 4px 15px;
+  border-radius: 12px;
+}
+
+.admin-user-management-table td.status.active {
+  color: #388e3c;
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.admin-user-management-table td.status.inactive {
+  color: #d32f2f;
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+/* Pagination styles */
+.admin-user-management-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
+
+.admin-user-management-pagination-info {
+  font-size: 13px;
+  color: #666;
+}
+
+.admin-user-management-pagination-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.admin-user-management-pagination-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-user-management-pagination-button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.admin-user-management-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-user-management-pagination-button.active {
+  background-color: #7ecb89;
+  color: white;
+  border-color: #7ecb89;
+}
+
+/* Modal styles */
+.admin-user-management-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.admin-user-management-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.admin-user-management-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-user-management-modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.admin-user-management-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 24px;
+}
+
+.admin-user-management-modal-close:hover {
+  color: #333;
+}
+
+.admin-user-management-modal-content {
+  padding: 20px;
+}
+
+.admin-user-management-form-group {
+  margin-bottom: 15px;
+}
+
+.admin-user-management-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #555;
+}
+
+.admin-user-management-form-group input,
+.admin-user-management-form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admin-user-management-form-group input:disabled {
+  background-color: #f5f5f5;
+}
+
+.admin-user-management-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+}
+

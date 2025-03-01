@@ -20,6 +20,7 @@ import AdminForgetRequested from "./pages/AdminPages/AdminLogin/AdminForgetReque
 import AdminDashboard from "./pages/AdminPages/AdminDashboard/AdminDashboard";
 import AdminBookInventory from "./pages/AdminPages/AdminBookInventory/AdminBookInventory";
 import AdminAssetManagement from "./pages/AdminPages/AdminAssetManagement/AdminAssetManagement";
+import AdminUserManagement from "./pages/AdminPages/AdminUserManagement/AdminUserManagement";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/admin-reset-requested" element={<AdminForgetRequested />} />
         <Route path="/admin-books-inventory" element={<AdminBookInventory />} />
         <Route path="/admin-asset-management" element={<AdminAssetManagement />} />
+        <Route path="/admin-user-management" element={<AdminUserManagement />} />
       </Routes>
     </Router>
   );

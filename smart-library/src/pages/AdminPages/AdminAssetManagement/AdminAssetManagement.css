@@ -1,5 +1,580 @@
-.admin-page-container {
-    display: flex;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+.admin-asset-management-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.admin-asset-management-main {
+  flex: 1;
+  padding: 15px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-left: 240px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  width: calc(100% - 240px);
+}
+
+.admin-asset-management-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.admin-asset-management-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.admin-asset-management-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-asset-management-tab {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.admin-asset-management-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-asset-management-tab.active {
+  background-color: #f5f7f9;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-asset-management-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.admin-asset-management-export,
+.admin-asset-management-ticket,
+.admin-asset-management-ticket-management {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.admin-asset-management-export {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.admin-asset-management-ticket {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.admin-asset-management-ticket.disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.admin-asset-management-ticket-management {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.admin-asset-management-export:hover {
+  background-color: #c8e6c9;
+}
+
+.admin-asset-management-ticket:hover:not(.disabled) {
+  background-color: #c8e6c9;
+}
+
+.admin-asset-management-ticket-management:hover {
+  background-color: #bbdefb;
+}
+
+.admin-asset-management-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 35rem;
+  overflow-y: auto;
+}
+
+.admin-asset-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.admin-asset-management-table th,
+.admin-asset-management-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Column widths - updated for even distribution */
+.admin-asset-management-table th.checkbox-column,
+.admin-asset-management-table td.checkbox-column {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  padding-left: 15px;
+  padding-right: 5px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.admin-asset-management-table th:nth-child(2),
+.admin-asset-management-table td:nth-child(2),
+.admin-asset-management-table th:nth-child(3),
+.admin-asset-management-table td:nth-child(3),
+.admin-asset-management-table th:nth-child(4),
+.admin-asset-management-table td:nth-child(4),
+.admin-asset-management-table th:nth-child(5),
+.admin-asset-management-table td:nth-child(5),
+.admin-asset-management-table th:nth-child(6),
+.admin-asset-management-table td:nth-child(6),
+.admin-asset-management-table th:nth-child(7),
+.admin-asset-management-table td:nth-child(7),
+.admin-asset-management-table th:nth-child(8),
+.admin-asset-management-table td:nth-child(8) {
+  width: calc((100% - 40px) / 7);
+  padding-left: 15px;
+}
+
+.admin-asset-management-table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+}
+
+.admin-asset-management-table th:hover {
+  background-color: #f0f0f0;
+}
+
+.admin-asset-management-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.admin-asset-management-table tbody tr.selected-row {
+  background-color: #f1f8e9;
+}
+
+.admin-asset-management-table td.status {
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 8px 4px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  width: auto;
+  position: relative;
+  top: 2px;
+  margin: 3px 0;
+}
+
+.admin-asset-management-table td.status.active {
+  color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.admin-asset-management-table td.status.inactive {
+  color: #f44336;
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* Custom checkbox styles */
+.custom-checkbox {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.custom-checkbox:hover {
+  border-color: #7ecb89;
+}
+
+.custom-checkbox.checked {
+  background-color: #7ecb89;
+  border-color: #7ecb89;
+  color: white;
+}
+
+/* Pagination styles */
+.admin-asset-management-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
+
+.admin-asset-management-pagination-info {
+  font-size: 13px;
+  color: #666;
+}
+
+.admin-asset-management-pagination-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.admin-asset-management-pagination-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-asset-management-pagination-button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.admin-asset-management-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-asset-management-pagination-button.active {
+  background-color: #7ecb89;
+  color: white;
+  border-color: #7ecb89;
+}
+
+/* Modal styles */
+.admin-asset-management-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.admin-asset-management-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.admin-asset-management-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-asset-management-modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.admin-asset-management-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.admin-asset-management-modal-close:hover {
+  color: #333;
+}
+
+.admin-asset-management-modal-content {
+  padding: 20px;
+}
+
+.admin-asset-management-form-group {
+  margin-bottom: 15px;
+}
+
+.admin-asset-management-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #555;
+}
+
+.admin-asset-management-form-group input,
+.admin-asset-management-form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admin-asset-management-form-group input:disabled {
+  background-color: #f5f5f5;
+}
+
+.admin-asset-management-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+}
+
+.admin-asset-management-modal-cancel {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-asset-management-modal-cancel:hover {
+  background-color: #f0f0f0;
+}
+
+.admin-asset-management-modal-confirm,
+.admin-asset-management-modal-raise {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #7ecb89;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.admin-asset-management-modal-confirm:hover,
+.admin-asset-management-modal-raise:hover {
+  background-color: #6cb977;
+}
+
+.admin-asset-management-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.admin-asset-management-modal-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Success toast */
+.admin-asset-management-success-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .admin-asset-management-main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+  
+  .admin-asset-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .admin-asset-management-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-asset-management-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .admin-asset-management-tabs {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+  
+  .admin-asset-management-actions {
+    flex-wrap: wrap;
+  }
+  
+  .admin-asset-management-pagination {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .admin-asset-management-pagination-controls {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Additional styles for the alternating row colors as shown in the screenshot */
+.admin-asset-management-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.admin-asset-management-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.admin-asset-management-table tbody tr.selected-row {
+  background-color: #e8f5e9;
+}
+
+/* Enhance table styling */
+.admin-asset-management-table {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-asset-management-table th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Enhance status styling to match screenshot */
+.admin-asset-management-table td.status {
+  width: auto;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px 12px 4px 15px;
+  border-radius: 12px;
+}
+
+.admin-asset-management-table td.status.active {
+  color: #388e3c;
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.admin-asset-management-table td.status.inactive {
+  color: #d32f2f;
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+/* Selected row with better green highlight to match screenshot */
+.admin-asset-management-table tbody tr.selected-row {
+  background-color: rgba(126, 203, 137, 0.15);
+}
+
+/* Better styling for the sort arrows */
+.admin-asset-management-table th svg {
+  vertical-align: middle;
+  margin-left: 4px;
+  opacity: 0.7;
+}
+
+.admin-asset-management-table th:hover svg {
+  opacity: 1;
+}
