@@ -112,7 +112,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   overflow-x: auto; /* Enable horizontal scrolling */
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 35rem; /* Adjust height as needed */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
 }
+
 
 .admin-book-inventory-table {
   width: 100%;
@@ -193,6 +198,72 @@
   color: #f44336;
 }
 
+.admin-book-inventory-table td.status.unavailable {
+  color: #f44336;
+}
+
+/* Pagination Styles */
+.admin-book-inventory-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  background-color: #fafafa;
+  border-radius: 0 0 8px 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-book-inventory-pagination-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.admin-book-inventory-pagination-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.admin-book-inventory-pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 5px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: #555;
+}
+
+.admin-book-inventory-pagination-button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+.admin-book-inventory-pagination-button.active {
+  background-color: #41B64D;
+  color: white;
+  font-weight: 500;
+}
+
+.admin-book-inventory-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-book-inventory-pagination-button.prev,
+.admin-book-inventory-pagination-button.next {
+  padding: 0;
+  width: 32px;
+}
+
 /* Modal Styles */
 .admin-book-inventory-modal-overlay {
   position: fixed;
@@ -266,7 +337,7 @@
 }
 
 .admin-book-inventory-modal-confirm {
-  background-color: #2196f3;
+  background-color: #41B64D;
   border: none;
   color: white;
   display: flex;
@@ -279,7 +350,7 @@
 }
 
 .admin-book-inventory-modal-confirm:hover {
-  background-color: #1976d2;
+  background-color: #187b36;
 }
 
 /* File upload styles */
@@ -336,6 +407,11 @@
     width: 100%;
     justify-content: flex-end;
   }
+  
+  .admin-book-inventory-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
@@ -346,5 +422,22 @@
   
   .admin-book-inventory-table-container {
     overflow-x: auto;
+  }
+  
+  .admin-book-inventory-pagination-controls {
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 5px;
+  }
+}
+
+/* Hide page numbers when there are too many */
+@media (max-width: 500px) {
+  .admin-book-inventory-pagination-button.page-number:not(.active) {
+    display: none;
+  }
+  
+  .admin-book-inventory-pagination-button.page-number.active {
+    display: flex;
   }
 }
