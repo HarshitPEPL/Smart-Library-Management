@@ -1,0 +1,207 @@
+.StudentBookPreview-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(51, 51, 51, 0.95);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.StudentBookPreview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.StudentBookPreview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+}
+
+.StudentBookPreview-headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.StudentBookPreview-backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.StudentBookPreview-bookInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.StudentBookPreview-bookInfo h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.StudentBookPreview-bookInfo p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.StudentBookPreview-authorInfo {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.StudentBookPreview-headerRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.StudentBookPreview-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.StudentBookPreview-icon {
+    cursor: pointer;
+    color: white;
+}
+
+.StudentBookPreview-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.StudentBookPreview-pageButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.StudentBookPreview-pageButton:hover {
+    opacity: 1;
+}
+
+.StudentBookPreview-pages {
+    flex: 1;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.StudentBookPreview-pageNumber {
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 3rem;
+}
+
+.StudentBookPreview-pageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+    position: relative;
+    bottom: 3rem;
+}
+
+.StudentBookPreview-page {
+    padding: 2rem;
+    font-family: serif;
+}
+
+.StudentBookPreview-page h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.StudentBookPreview-page h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.StudentBookPreview-quote p1 {
+    text-align: center;
+    font-style: italic;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.StudentBookPreview-quote p1 {
+    text-align: center;
+    font-style: italic;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+
+
+.StudentBookPreview-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.StudentBookPreview-dropdownMenu {
+    position: absolute;
+    top: 120%;
+    right: 0%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    min-width: 100px;
+}
+
+.StudentBookPreview-dropdownMenu li {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.StudentBookPreview-dropdownMenu li:hover {
+    background-color: #f0f0f0;
+}

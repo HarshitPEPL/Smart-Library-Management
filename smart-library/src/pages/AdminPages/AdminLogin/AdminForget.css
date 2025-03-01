@@ -1,0 +1,131 @@
+.adminforget-wrapper {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  }
+  
+  .adminforget-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .adminforget-image {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    right: 8rem;
+  }
+  
+  .adminforget-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    position: relative;
+    right: 10rem;
+    max-width: 400px;
+    height: 35rem;
+    min-height: 350px;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .adminforget-logo-image {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+    position: relative;
+    bottom: 1rem;
+  }
+  
+  .adminforget-subtitle {
+    font-size: 0.9rem;
+    color: #4D4D4D;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    bottom: 0.7rem;
+  }
+  
+  .adminforget-subsubtitle {
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 15px;
+    color: #246C3E;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    bottom: 1.5rem;
+  }
+  
+  .adminforget-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .adminforget-field {
+    margin-bottom: 1.5rem;
+    color: #ba5151;
+  }
+  
+  .adminforget-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #4D4D4D;
+    font-size: 0.9rem;
+  }
+  
+  .adminforget-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    border: 1px solid #DCD9D9;
+    border-radius: 8px;
+    outline: none;
+    opacity: 50%;
+  }
+  
+  .adminforget-input:focus {
+    border-color: #42bb4e;
+    box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
+  }
+  
+  .adminforget-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #42bb4e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+  }
+  
+  .adminforget-button:hover {
+    background-color: #20812a;
+  }
+  
+  .adminforget-back {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .adminforget-back-link {
+    color: #4D4D4D;
+    text-decoration: underline;
+    font-size: 0.8rem;
+  }
+  
+  .adminforget-back-link:hover {
+    text-decoration: underline;
+  }

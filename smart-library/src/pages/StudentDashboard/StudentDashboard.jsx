@@ -58,14 +58,14 @@
 // };
 
 // export default StudentDashboard;
-
-
 import React from 'react';
 import './StudentDashboard.css';
 import StudentNavBar from '../../components/StudentNavBar';
 import StudentSideBar from '../../components/StudentSideBar';
+import { useNavigate } from "react-router-dom";
 
 const StudentDashboard = () => {
+  const navigate = useNavigate();
   const books = [
     { id: 1, image: "/HolyBible.png", alt: "Holy Bible" },
     { id: 2, image: "/Harry.png", alt: "Harry Potter" },
@@ -174,112 +174,109 @@ const StudentDashboard = () => {
       title: "The 4-Hour Work Week", 
       author: "Timothy Ferriss"
     }
-];
+  ];
 
-const academicbooks = [
-  { 
-    id: 1, 
-    image: "/ABriefHistory.png", 
-    title: "A Brief History of Time", 
-    author: "Stephen Hawking"
-  },
-  { 
-    id: 2, 
-    image: "/TheSelfishGene.png", 
-    title: "The Selfish Gene", 
-    author: "Richard Dawkins"
-  },
-  { 
-    id: 3, 
-    image: "/IntroductionToTheTheoryOfComputation.png", 
-    title: "Introduction to the Theory of Computation", 
-    author: "Michael Sipser"
-  },
-  { 
-    id: 4, 
-    image: "/TheWealthOfNation.png", 
-    title: "The Wealth of Nations", 
-    author: "Adam Smith"
-  },
-  { 
-    id: 5, 
-    image: "/TheElegantUniverse.png", 
-    title: "The Elegant Universe", 
-    author: "Brian Greene"
-  },
-  { 
-    id: 6, 
-    image: "/Flatland.png", 
-    title: "Flatland: A Romance of Many Dimensions", 
-    author: "Edwin A. Abbott"
-  },
-  { 
-    id: 7, 
-    image: "/TheGitaForChildren.png", 
-    title: "The Gita for Children", 
-    author: "Roopa Pai"
-  },
-  { 
-    id: 8, 
-    image: "/TheWonderThatWasIndia.png", 
-    title: "The Wonder That Was India", 
-    author: "A.L. Basham"
-  }
-];
+  const academicbooks = [
+    { 
+      id: 1, 
+      image: "/ABriefHistory.png", 
+      title: "A Brief History of Time", 
+      author: "Stephen Hawking"
+    },
+    { 
+      id: 2, 
+      image: "/TheSelfishGene.png", 
+      title: "The Selfish Gene", 
+      author: "Richard Dawkins"
+    },
+    { 
+      id: 3, 
+      image: "/IntroductionToTheTheoryOfComputation.png", 
+      title: "Introduction to the Theory of Computation", 
+      author: "Michael Sipser"
+    },
+    { 
+      id: 4, 
+      image: "/TheWealthOfNation.png", 
+      title: "The Wealth of Nations", 
+      author: "Adam Smith"
+    },
+    { 
+      id: 5, 
+      image: "/TheElegantUniverse.png", 
+      title: "The Elegant Universe", 
+      author: "Brian Greene"
+    },
+    { 
+      id: 6, 
+      image: "/Flatland.png", 
+      title: "Flatland: A Romance of Many Dimensions", 
+      author: "Edwin A. Abbott"
+    },
+    { 
+      id: 7, 
+      image: "/TheGitaForChildren.png", 
+      title: "The Gita for Children", 
+      author: "Roopa Pai"
+    },
+    { 
+      id: 8, 
+      image: "/TheWonderThatWasIndia.png", 
+      title: "The Wonder That Was India", 
+      author: "A.L. Basham"
+    }
+  ];
 
-const nonacademicbooks = [
-  { 
-    id: 1, 
-    image: "/Thinking.png", 
-    title: "A Brief History of Time", 
-    author: "Stephen Hawking"
-  },
-  { 
-    id: 2, 
-    image: "/Sapiens.png", 
-    title: "The Selfish Gene", 
-    author: "Richard Dawkins"
-  },
-  { 
-    id: 3, 
-    image: "/Start.png", 
-    title: "Introduction to the Theory of Computation", 
-    author: "Michael Sipser"
-  },
-  { 
-    id: 4, 
-    image: "/GoodToGreat.png", 
-    title: "The Wealth of Nations", 
-    author: "Adam Smith"
-  },
-  { 
-    id: 5, 
-    image: "/Outliers.png", 
-    title: "The Elegant Universe", 
-    author: "Brian Greene"
-  },
-  { 
-    id: 6, 
-    image: "/ZeroToOne.png", 
-    title: "Flatland: A Romance of Many Dimensions", 
-    author: "Edwin A. Abbott"
-  },
-  { 
-    id: 7, 
-    image: "/PowerOfNow.png", 
-    title: "The Gita for Children", 
-    author: "Roopa Pai"
-  },
-  { 
-    id: 8, 
-    image: "/4HourWork.png", 
-    title: "The Wonder That Was India", 
-    author: "A.L. Basham"
-  }
-];
-
-
-
+  const nonacademicbooks = [
+    { 
+      id: 1, 
+      image: "/Thinking.png", 
+      title: "A Brief History of Time", 
+      author: "Stephen Hawking"
+    },
+    { 
+      id: 2, 
+      image: "/Sapiens.png", 
+      title: "The Selfish Gene", 
+      author: "Richard Dawkins"
+    },
+    { 
+      id: 3, 
+      image: "/Start.png", 
+      title: "Introduction to the Theory of Computation", 
+      author: "Michael Sipser"
+    },
+    { 
+      id: 4, 
+      image: "/GoodToGreat.png", 
+      title: "The Wealth of Nations", 
+      author: "Adam Smith"
+    },
+    { 
+      id: 5, 
+      image: "/Outliers.png", 
+      title: "The Elegant Universe", 
+      author: "Brian Greene"
+    },
+    { 
+      id: 6, 
+      image: "/ZeroToOne.png", 
+      title: "Flatland: A Romance of Many Dimensions", 
+      author: "Edwin A. Abbott"
+    },
+    { 
+      id: 7, 
+      image: "/PowerOfNow.png", 
+      title: "The Gita for Children", 
+      author: "Roopa Pai"
+    },
+    { 
+      id: 8, 
+      image: "/4HourWork.png", 
+      title: "The Wonder That Was India", 
+      author: "A.L. Basham"
+    }
+  ];
 
   return (
     <div className="StudentDashboard">
@@ -326,7 +323,12 @@ const nonacademicbooks = [
           <h2 className="StudentDashboard-recommended-title">Recommended Books</h2>
           <div className="StudentDashboard-recommended-grid">
             {recommendedBooks.map((book) => (
-              <div key={book.id} className="StudentDashboard-recommended-book">
+              <div 
+                key={book.id} 
+                className="StudentDashboard-recommended-book"
+                onClick={() => book.title === "Rich Dad Poor Dad" ? navigate('/student-book-description') : null}
+                style={{ cursor: book.title === "Rich Dad Poor Dad" ? 'pointer' : 'default' }}
+              >
                 <div className="StudentDashboard-recommended-book-image">
                   <img src={book.image} alt={book.title} />
                 </div>
@@ -338,58 +340,52 @@ const nonacademicbooks = [
         </div>
 
         {/* Recent Reads section */}
-
         <div className="StudentDashboard-recent">
           <h2 className="StudentDashboard-recent-title">Recent Reads</h2>
-         <div className="StudentDashboard-recent-grid">
-          {recentReads.map((book) => (
-            <div key={book.id} className="StudentDashboard-recent-book">
-              <div className="StudentDashboard-recent-book-image">
-                <img src={book.image} alt={book.title} />
+          <div className="StudentDashboard-recent-grid">
+            {recentReads.map((book) => (
+              <div key={book.id} className="StudentDashboard-recent-book">
+                <div className="StudentDashboard-recent-book-image">
+                  <img src={book.image} alt={book.title} />
+                </div>
+                <h3 className="StudentDashboard-recent-book-title">{book.title}</h3>
+                <p className="StudentDashboard-recent-book-author">{book.author}</p>
               </div>
-              <h3 className="StudentDashboard-recent-book-title">{book.title}</h3>
-              <p className="StudentDashboard-recent-book-author">{book.author}</p>
-            </div>
-          ))}
-         </div>
+            ))}
+          </div>
         </div>
 
-         {/* Acadamic Book Section */}
-
-         <div className="StudentDashboard-academicbook">
+        {/* Academic Book Section */}
+        <div className="StudentDashboard-academicbook">
           <h2 className="StudentDashboard-academicbook-title">Academic Books</h2>
-         <div className="StudentDashboard-academicbook-grid">
-          {academicbooks.map((book) => (
-            <div key={book.id} className="StudentDashboard-academic-book">
-              <div className="StudentDashboard-academic-book-image">
-                <img src={book.image} alt={book.title} />
+          <div className="StudentDashboard-academicbook-grid">
+            {academicbooks.map((book) => (
+              <div key={book.id} className="StudentDashboard-academic-book">
+                <div className="StudentDashboard-academic-book-image">
+                  <img src={book.image} alt={book.title} />
+                </div>
+                <h3 className="StudentDashboard-academic-book-title">{book.title}</h3>
+                <p className="StudentDashboard-academic-book-author">{book.author}</p>
               </div>
-              <h3 className="StudentDashboard-academic-book-title">{book.title}</h3>
-              <p className="StudentDashboard-academic-book-author">{book.author}</p>
-            </div>
-          ))}
-         </div>
+            ))}
+          </div>
         </div>
 
-            {/* Non-Academic Book Section*/}
+        {/* Non-Academic Book Section*/}
         <div className="StudentDashboard-nonacademicbook">
           <h2 className="StudentDashboard-nonacademicbook-title">Non-Academic Books</h2>
-         <div className="StudentDashboard-nonacademicbook-grid">
-          {academicbooks.map((book) => (
-            <div key={book.id} className="StudentDashboard-nonacademic-book">
-              <div className="StudentDashboard-nonacademic-book-image">
-                <img src={book.image} alt={book.title} />
+          <div className="StudentDashboard-nonacademicbook-grid">
+            {nonacademicbooks.map((book) => (
+              <div key={book.id} className="StudentDashboard-nonacademic-book">
+                <div className="StudentDashboard-nonacademic-book-image">
+                  <img src={book.image} alt={book.title} />
+                </div>
+                <h3 className="StudentDashboard-nonacademic-book-title">{book.title}</h3>
+                <p className="StudentDashboard-nonacademic-book-author">{book.author}</p>
               </div>
-              <h3 className="StudentDashboard-nonacademic-book-title">{book.title}</h3>
-              <p className="StudentDashboard-nonacademic-book-author">{book.author}</p>
-            </div>
-          ))}
-         </div>
-        </div>  
-
-
-
-
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -210,7 +210,7 @@
   
   .Student-ebook-title-section {
     justify-content: center;
-  }
+  } 
   
   .Student-ebook-categories,
   .Student-ebook-formats,
@@ -234,7 +234,7 @@
   min-height: calc(100vh - 60px);
 }
 
-.Student-ebook-list {
+.Student-ebook-list { 
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -253,7 +253,7 @@
   border-radius: 8px;
 }
 
-.pagination-button {
+.student-pagination-button {
   background: none;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -265,16 +265,16 @@
   transition: all 0.2s ease;
 }
 
-.pagination-button:disabled {
+.student-pagination-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.pagination-button:hover:not(:disabled) {
-  background-color: #f5f5f5;
+.student-pagination-button:hover:not(:disabled) {
+  background-color: #f5f5f5; 
 }
 
-.pagination-info {
+.student-pagination-info {
   font-size: 0.9rem;
   color: #666;
 }

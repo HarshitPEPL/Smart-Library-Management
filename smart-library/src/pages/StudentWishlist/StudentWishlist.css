@@ -1,12 +1,190 @@
 .StudentWishlist {
-    min-height: 240vh; /* Just viewport height */
-    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
-    position: relative;
-    padding-bottom: 0rem;
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.StudentWishlist-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  overflow-x: hidden;
+}
+
+.StudentWishlist-content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 60px;
+}
+
+.StudentWishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.StudentWishlist-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.StudentWishlist-card:hover {
+  transform: translateY(-5px);
+}
+
+.StudentWishlist-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.StudentWishlist-info {
+  padding: 1rem;
+}
+
+.StudentWishlist-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.StudentWishlist-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.StudentWishlist-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preview-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.preview-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #ff4747;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.delete-button:hover {
+  color: #ff0000;
+}
+
+/* Custom Delete Dialog Styles */
+.delete-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-dialog {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-dialog-content h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.delete-dialog-content p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.delete-dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.dialog-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.dialog-button.cancel {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #666;
+}
+
+.dialog-button.cancel:hover {
+  background-color: #f5f5f5;
+}
+
+.dialog-button.confirm {
+  background-color: #ff4747;
+  border: none;
+  color: white;
+}
+
+.dialog-button.confirm:hover {
+  background-color: #ff0000;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .StudentWishlist-main {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .StudentWishlist-main {
+    margin-left: 0;
   }
   
-  .StudentWishlist-content {
-    padding: 20px;
-    flex: 1;
-    overflow-y: auto;
+  .StudentWishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
   }
+  
+  .StudentWishlist-image {
+    height: 180px;
+  }
+}

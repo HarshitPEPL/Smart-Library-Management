@@ -1,0 +1,350 @@
+.admin-book-inventory-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.admin-book-inventory-main {
+  flex: 1;
+  padding: 15px;
+  padding-left: 25px; /* Added padding to move content away from sidebar */
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* Adjust based on your navbar height */
+  margin-left: 240px; /* Add margin to account for sidebar width - adjust this value based on your sidebar width */
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  width: calc(100% - 240px); /* Set width to account for sidebar */
+}
+
+.admin-book-inventory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.admin-book-inventory-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.admin-book-inventory-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-book-inventory-tab {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.admin-book-inventory-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-book-inventory-tab.active {
+  background-color: #f5f7f9;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-book-inventory-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.admin-book-inventory-export,
+.admin-book-inventory-import {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.admin-book-inventory-export {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.admin-book-inventory-import {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.admin-book-inventory-export:hover {
+  background-color: #c8e6c9;
+}
+
+.admin-book-inventory-import:hover {
+  background-color: #ffcdd2;
+}
+
+.admin-book-inventory-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Enable horizontal scrolling */
+  flex: 1;
+}
+
+.admin-book-inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Fixed layout for better control */
+}
+
+.admin-book-inventory-table th,
+.admin-book-inventory-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+/* Column widths */
+.admin-book-inventory-table th:nth-child(1),
+.admin-book-inventory-table td:nth-child(1) {
+  width: 18%; /* Books Name */
+}
+
+.admin-book-inventory-table th:nth-child(2),
+.admin-book-inventory-table td:nth-child(2) {
+  width: 12%; /* Serial No. */
+}
+
+.admin-book-inventory-table th:nth-child(3),
+.admin-book-inventory-table td:nth-child(3) {
+  width: 14%; /* Category */
+}
+
+.admin-book-inventory-table th:nth-child(4),
+.admin-book-inventory-table td:nth-child(4) {
+  width: 16%; /* Sub-Category */
+}
+
+.admin-book-inventory-table th:nth-child(5),
+.admin-book-inventory-table td:nth-child(5) {
+  width: 15%; /* Author */
+}
+
+.admin-book-inventory-table th:nth-child(6),
+.admin-book-inventory-table td:nth-child(6) {
+  width: 15%; /* Copies or Status */
+}
+
+.admin-book-inventory-table th:nth-child(7),
+.admin-book-inventory-table td:nth-child(7) {
+  width: 10%; /* Status when copies column is visible */
+}
+
+.admin-book-inventory-table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+}
+
+.admin-book-inventory-table th:hover {
+  background-color: #f0f0f0;
+}
+
+.admin-book-inventory-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.admin-book-inventory-table td.status {
+  font-weight: 500;
+}
+
+.admin-book-inventory-table td.status.available {
+  color: #4caf50;
+}
+
+.admin-book-inventory-table td.status.issued {
+  color: #f44336;
+}
+
+/* Modal Styles */
+.admin-book-inventory-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.admin-book-inventory-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-book-inventory-modal h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.admin-book-inventory-modal p {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.admin-book-inventory-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-book-inventory-modal-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.admin-book-inventory-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.admin-book-inventory-modal-cancel,
+.admin-book-inventory-modal-confirm {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-book-inventory-modal-cancel {
+  background-color: #f0f0f0;
+  border: none;
+  color: #666;
+}
+
+.admin-book-inventory-modal-confirm {
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-book-inventory-modal-cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-book-inventory-modal-confirm:hover {
+  background-color: #1976d2;
+}
+
+/* File upload styles */
+.admin-book-inventory-file-upload {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.admin-book-inventory-file-input {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.admin-book-inventory-file-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.admin-book-inventory-file-label:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-book-inventory-file-name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Handle responsive layout */
+@media (max-width: 1080px) {
+  .admin-book-inventory-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .admin-book-inventory-tabs {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+  
+  .admin-book-inventory-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-book-inventory-main {
+    margin-left: 0; /* Reset margin for mobile view */
+    width: 100%; /* Full width for mobile */
+  }
+  
+  .admin-book-inventory-table-container {
+    overflow-x: auto;
+  }
+}

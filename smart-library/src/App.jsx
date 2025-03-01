@@ -12,11 +12,20 @@ import StudentAnnouncements from "./pages/StudentAnnouncements/StudentAnnounceme
 import StudentCatalogue from "./pages/StudentCatalogue/StudentCatalogue";
 import StudentOurLegends from "./pages/StudentOurLegends/StudentOurLegends";
 import StudentWishlist from "./pages/StudentWishlist/StudentWishlist";      
+import StudentBookDescription from "./pages/StudentBookDescription/StudentBookDescription";
+import LandingPage from "./pages/LandingPage";
+import AdminLogin from "./pages/AdminPages/AdminLogin/AdminLogin";
+import AdminForget from "./pages/AdminPages/AdminLogin/AdminForget";
+import AdminForgetRequested from "./pages/AdminPages/AdminLogin/AdminForgetRequested";
+import AdminDashboard from "./pages/AdminPages/AdminDashboard/AdminDashboard";
+import AdminBookInventory from "./pages/AdminPages/AdminBookInventory/AdminBookInventory";
+import AdminAssetManagement from "./pages/AdminPages/AdminAssetManagement/AdminAssetManagement";
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* Student Routes */}
         <Route path="/login" element={<StudentLogin />} />
         <Route path="/forgot-password" element={<StudentForget />} />
         <Route path="/reset-requested" element={<StudentForgetRequested />} />
@@ -29,9 +38,20 @@ function App() {
         <Route path="/student-catalogue" element={<StudentCatalogue />} />
         <Route path="/student-legends" element={<StudentOurLegends />} />
         <Route path="/student-wishlist" element={<StudentWishlist />} />
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/student-book-description" element={<StudentBookDescription />} />
         <Route path="/student-login" element={<StudentLogin />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
+
+        {/* Landing page */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* Admin routes */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin-forgot-password" element={<AdminForget />} />
+        <Route path="/admin-reset-requested" element={<AdminForgetRequested />} />
+        <Route path="/admin-books-inventory" element={<AdminBookInventory />} />
+        <Route path="/admin-asset-management" element={<AdminAssetManagement />} />
       </Routes>
     </Router>
   );

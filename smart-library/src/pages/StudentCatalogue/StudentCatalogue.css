@@ -1,12 +1,251 @@
-.Student-catalogue-layout {
-    min-height: 240vh; /* Just viewport height */
-    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
-    position: relative;
-    padding-bottom: 0rem;
+.Student-catalogue {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.Student-catalogue-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+}
+
+.Student-catalogue-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px);
+}
+
+.Student-catalogue-header {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.Student-catalogue-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.Student-catalogue-item {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.Student-catalogue-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.Student-catalogue-title-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Student-catalogue-image {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Student-catalogue-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.Student-catalogue-info h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.Student-catalogue-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.Student-catalogue-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Student-catalogue-category {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.Student-catalogue-availability {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.Student-catalogue-status {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.Student-catalogue-status.available {
+  color: #2ecc71;
+}
+
+.Student-catalogue-status.unavailable {
+  color: #e74c3c;
+}
+
+.Student-catalogue-copies {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.Student-catalogue-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Student-catalogue-wishlist-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  position: relative;
+  right: 5rem;
+}
+
+.Student-catalogue-wishlist-button:hover {
+  transform: scale(1.1);
+}
+
+.Student-catalogue-borrow-button {
+  padding: 0.4rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  font-weight: 500;
+  position: relative;
+  right: 3rem;
+}
+
+.Student-catalogue-borrow-button:hover:not(:disabled) {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.Student-catalogue-borrow-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #999;
+  color: #999;
+}
+
+.Student-catalogue-wishlist-button.wishlisted {
+  color: #ff4747;
+}
+
+/* Pagination Styles */
+.Student-catalogue-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: auto;
+  border-radius: 8px;
+}
+
+.pagination-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .Student-catalogue-main {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Student-catalogue-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
-
-  .Student-catalogue-container {
-    padding: 2rem;
-    flex: 1;
+  .Student-catalogue-header {
+    display: none;
   }
+  
+  .Student-catalogue-title-section {
+    justify-content: center;
+  }
+  
+  .Student-catalogue-categories,
+  .Student-catalogue-availability,
+  .Student-catalogue-actions {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Student-catalogue-pagination {
+    margin-top: 1rem;
+    position: sticky;
+    bottom: 0;
+  }
+}

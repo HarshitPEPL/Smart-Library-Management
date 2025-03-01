@@ -161,7 +161,7 @@ const StudentNavBar = () => {
   };
 
   const navigateToWishlist = () => {
-    navigate('/wishlist');
+    navigate('/student-wishlist');
   };
 
   return (
