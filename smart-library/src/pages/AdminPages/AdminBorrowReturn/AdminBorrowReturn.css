@@ -1,0 +1,495 @@
+.admin-borrow-return-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  }
+  
+  .admin-borrow-return-main {
+    flex: 1;
+    padding: 15px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* Adjust based on your navbar height */
+    margin-left: 240px; /* Add margin to account for sidebar width */
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    width: calc(100% - 240px);
+  }
+  
+  .admin-borrow-return-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .admin-borrow-return-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+  
+  .admin-borrow-return-filter-container {
+    position: relative;
+  }
+  
+  .admin-borrow-return-filter-button {
+    padding: 8px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .admin-borrow-return-filter-button:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .filter-icon {
+    font-size: 10px;
+  }
+  
+  .admin-borrow-return-filter-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    width: 280px;
+    margin-top: 8px;
+  }
+  
+  .filter-group {
+    margin-bottom: 15px;
+  }
+  
+  .filter-group h3 {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  .filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .filter-apply-btn,
+  .filter-reset-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .filter-apply-btn {
+    background-color: #41B64D;
+    color: white;
+  }
+  
+  .filter-reset-btn {
+    background-color: #f0f0f0;
+    color: #666;
+  }
+  
+  .filter-apply-btn:hover {
+    background-color: #349e40;
+  }
+  
+  .filter-reset-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .admin-borrow-return-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+  
+  .admin-borrow-return-export,
+  .admin-borrow-return-import {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+  }
+  
+  .admin-borrow-return-export {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .admin-borrow-return-import {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .admin-borrow-return-export:hover {
+    background-color: #c8e6c9;
+  }
+  
+  .admin-borrow-return-import:hover {
+    background-color: #ffcdd2;
+  }
+  
+  .admin-borrow-return-search {
+    margin-bottom: 15px;
+  }
+  
+  .admin-borrow-return-search input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .admin-borrow-return-search input:focus {
+    border-color: #41B64D;
+    box-shadow: 0 0 0 2px rgba(65, 182, 77, 0.1);
+  }
+  
+  .admin-borrow-return-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 35rem;
+    overflow-y: auto;
+  }
+  
+  .admin-borrow-return-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .admin-borrow-return-table th,
+  .admin-borrow-return-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .admin-borrow-return-table th {
+    background-color: #fafafa;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .admin-borrow-return-table th:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .admin-borrow-return-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .admin-borrow-return-table td.status {
+    font-weight: 500;
+  }
+  
+  .admin-borrow-return-table td.status.returned {
+    color: #4caf50;
+  }
+  
+  .admin-borrow-return-table td.status.overdue {
+    color: #f44336;
+  }
+  
+  /* Pagination Styles */
+  .admin-borrow-return-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .admin-borrow-return-pagination-info {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .admin-borrow-return-pagination-controls {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .admin-borrow-return-pagination-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 5px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .admin-borrow-return-pagination-button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+  }
+  
+  .admin-borrow-return-pagination-button.active {
+    background-color: #41B64D;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .admin-borrow-return-pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .admin-borrow-return-pagination-button.prev,
+  .admin-borrow-return-pagination-button.next {
+    padding: 0;
+    width: 32px;
+  }
+  
+  /* Modal Styles */
+  .admin-borrow-return-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .admin-borrow-return-modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .admin-borrow-return-modal h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .admin-borrow-return-modal p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .admin-borrow-return-modal-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-borrow-return-modal-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .admin-borrow-return-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .admin-borrow-return-modal-cancel,
+  .admin-borrow-return-modal-confirm {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .admin-borrow-return-modal-cancel {
+    background-color: #f0f0f0;
+    border: none;
+    color: #666;
+  }
+  
+  .admin-borrow-return-modal-confirm {
+    background-color: #41B64D;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .admin-borrow-return-modal-cancel:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .admin-borrow-return-modal-confirm:hover {
+    background-color: #187b36;
+  }
+  
+  .admin-borrow-return-modal-confirm:disabled {
+    background-color: #a8d7b0;
+    cursor: not-allowed;
+  }
+  
+  /* File upload styles */
+  .admin-borrow-return-file-upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .admin-borrow-return-file-input {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  
+  .admin-borrow-return-file-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .admin-borrow-return-file-label:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .admin-borrow-return-file-name {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 1080px) {
+    .admin-borrow-return-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .admin-borrow-return-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+    
+    .admin-borrow-return-pagination {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .admin-borrow-return-main {
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    .admin-borrow-return-table-container {
+      overflow-x: auto;
+    }
+    
+    .admin-borrow-return-pagination-controls {
+      overflow-x: auto;
+      max-width: 100%;
+      padding-bottom: 5px;
+    }
+  }
+  
+  /* Hide page numbers when there are too many */
+  @media (max-width: 500px) {
+    .admin-borrow-return-pagination-button.page-number:not(.active) {
+      display: none;
+    }
+    
+    .admin-borrow-return-pagination-button.page-number.active {
+      display: flex;
+    }
+  }

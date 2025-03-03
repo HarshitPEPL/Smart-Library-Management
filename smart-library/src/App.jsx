@@ -21,6 +21,8 @@ import AdminDashboard from "./pages/AdminPages/AdminDashboard/AdminDashboard";
 import AdminBookInventory from "./pages/AdminPages/AdminBookInventory/AdminBookInventory";
 import AdminAssetManagement from "./pages/AdminPages/AdminAssetManagement/AdminAssetManagement";
 import AdminUserManagement from "./pages/AdminPages/AdminUserManagement/AdminUserManagement";
+import AdminBorrowReturn from "./pages/AdminPages/AdminBorrowReturn/AdminBorrowReturn";
+import AdminAnnouncements from "./pages/AdminPages/AdminAnnouncements/AdminAnnouncements";
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
         <Route path="/admin-books-inventory" element={<AdminBookInventory />} />
         <Route path="/admin-asset-management" element={<AdminAssetManagement />} />
         <Route path="/admin-user-management" element={<AdminUserManagement />} />
+        <Route path="/admin-borrow-return" element={<AdminBorrowReturn />} />
+        <Route path="/admin-announcements" element={<AdminAnnouncements />} />
       </Routes>
     </Router>
   );
