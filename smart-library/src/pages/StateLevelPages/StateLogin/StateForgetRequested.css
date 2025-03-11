@@ -1,24 +1,24 @@
-.adminlogin-wrapper {
+.state-forget-requested-wrapper {
     display: flex;
     height: 100vh;
     background: linear-gradient(45deg, #EFFAF1, #7ecb89);
   }
   
-  .adminlogin-left {
+  .state-forget-requested-left {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .adminlogin-image {
+  .state-forget-requested-image {
     width: 60%;
     height: 80%;
     position: relative;
     right: 8rem;
   }
   
-  .adminlogin-right {
+  .state-forget-requested-right {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     font-family: 'Inter', sans-serif;
   }
   
-  .adminlogin-logo-image {
+  .state-forget-requested-logo-image {
     width: 100px;
     height: auto;
     display: block;
@@ -46,17 +46,16 @@
     bottom: 1rem;
   }
   
-  .adminlogin-subtitle {
+  .state-forget-requested-subtitle {
     font-size: 0.9rem;
     color: #4D4D4D;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-family: 'Inter', sans-serif;
     position: relative;
     bottom: 0.7rem;
-    white-space: nowrap;
   }
   
-  .adminlogin-subsubtitle {
+  .state-forget-requested-subsubtitle {
     font-size: 0.8rem;
     position: relative;
     bottom: 15px;
@@ -66,17 +65,40 @@
     bottom: 1.5rem;
   }
   
-  .adminlogin-form {
+  .state-forget-requested-form {
     width: 100%;
     max-width: 400px;
   }
   
-  .adminlogin-field {
+  .state-forget-requested-otp-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .state-forget-requested-otp-input {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid #DCD9D9;
+    border-radius: 8px;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .state-forget-requested-otp-input:focus {
+    border-color: #42bb4e;
+    box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
+  }
+  
+  .state-forget-requested-field {
     margin-bottom: 1.5rem;
     color: #ba5151;
   }
   
-  .adminlogin-label {
+  .state-forget-requested-label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -84,10 +106,9 @@
     font-size: 0.9rem;
   }
   
-  .adminlogin-input {
+  .state-forget-requested-input {
     width: 100%;
     padding: 0.75rem;
-    padding-right: 2.5rem;
     font-size: 0.8rem;
     border: 1px solid #DCD9D9;
     border-radius: 8px;
@@ -95,46 +116,12 @@
     opacity: 50%;
   }
   
-  .adminlogin-input:focus {
+  .state-forget-requested-input:focus {
     border-color: #42bb4e;
     box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
   }
   
-  .adminlogin-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    width: 100%;
-  }
-  
-  .adminlogin-rememberme input {
-    margin-right: 0.5rem;
-    width: 10px;
-    height: 10px;
-    position: relative;
-    bottom: 5px;
-  }
-  
-  .remember-text {
-    font-size: 0.8rem;
-    position: relative;
-    bottom: 5px;
-  }
-  
-  .adminlogin-forgot {
-    color: #4D4D4D;
-    text-decoration: underline;
-    font-size: 0.8rem;
-    position: relative;
-    bottom: 5px;
-  }
-  
-  .adminlogin-forgot:hover {
-    text-decoration: underline;
-  }
-  
-  .adminlogin-button {
+  .state-forget-requested-button {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -144,38 +131,24 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 1rem;
   }
   
-  .adminlogin-button:hover {
+  .state-forget-requested-button:hover {
     background-color: #20812a;
   }
   
-  .password-input-wrapper {
-    position: relative;
-    width: 100%;
+  .state-forget-requested-back {
+    text-align: center;
+    margin-top: 1rem;
   }
   
-  .password-toggle-button {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .state-forget-requested-back-link {
     color: #4D4D4D;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+    text-decoration: underline;
+    font-size: 0.8rem;
   }
   
-  .password-toggle-button:hover {
-    opacity: 1;
-  }
-  
-  .password-toggle-icon {
-    display: block;
+  .state-forget-requested-back-link:hover {
+    text-decoration: underline;
   }

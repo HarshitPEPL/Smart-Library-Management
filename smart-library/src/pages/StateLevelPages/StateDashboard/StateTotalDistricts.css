@@ -1,0 +1,238 @@
+.State-Total-Districts-Container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  }
+  
+  .State-Total-Districts-Content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .State-Total-Districts-Main-Content {
+    flex: 1;
+    padding: 24px;
+    background-color: #f5f7fa;
+  }
+  
+  .State-Total-Districts-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .State-Total-Districts-Header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a3353;
+    margin: 0;
+  }
+  
+  .State-Total-Districts-Actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .State-Total-Districts-Search-Container {
+    position: relative;
+  }
+  
+  .State-Total-Districts-Search-Input {
+    padding: 10px 16px 10px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .State-Total-Districts-Search-Icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .State-Total-Districts-Add-Button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .State-Total-Districts-Add-Button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .State-Total-Districts-Stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .State-Total-Districts-Stat-Card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .State-Total-Districts-Stat-Card h3 {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+  }
+  
+  .State-Total-Districts-Stat-Card p {
+    font-size: 24px;
+    color: #1a3353;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .State-Total-Districts-Table-Container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .State-Total-Districts-Table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .State-Total-Districts-Table th {
+    background-color: #f8fafc;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .State-Total-Districts-Table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    color: #334155;
+  }
+  
+  .State-Total-Districts-Table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .State-Total-Districts-Status-Badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .State-Total-Districts-Status-Badge.active {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  
+  .State-Total-Districts-Status-Badge.inactive {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .State-Total-Districts-Action-Buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .State-Total-Districts-Edit-Button, 
+  .State-Total-Districts-View-Button {
+    border: none;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .State-Total-Districts-Edit-Button {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+  }
+  
+  .State-Total-Districts-View-Button {
+    background-color: #f0f9ff;
+    color: #0369a1;
+  }
+  
+  .State-Total-Districts-Edit-Button:hover {
+    background-color: #dbeafe;
+  }
+  
+  .State-Total-Districts-View-Button:hover {
+    background-color: #e0f2fe;
+  }
+  
+  .State-Total-Districts-Loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 18px;
+    color: #64748b;
+  }
+  
+  .State-Total-Districts-No-Data {
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .State-Total-Districts-Header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    
+    .State-Total-Districts-Actions {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .State-Total-Districts-Search-Container {
+      width: 100%;
+    }
+    
+    .State-Total-Districts-Search-Input {
+      width: 100%;
+    }
+    
+    .State-Total-Districts-Add-Button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .State-Total-Districts-Stats {
+      grid-template-columns: 1fr;
+    }
+    
+    .State-Total-Districts-Table-Container {
+      overflow-x: auto;
+    }
+  }

@@ -1,0 +1,369 @@
+/* Base container styling */
+.admin-reports-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+  overflow: hidden;
+}
+
+/* Navbar styling to ensure proper z-index */
+.admin-navbar,
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Content area that contains sidebar and main content */
+.admin-reports-content {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 60px); /* Adjust based on your header height */
+  position: relative;
+  top: 5.5rem;
+  left: 0.5rem;
+}
+
+/* Fix the sidebar positioning with higher z-index */
+.admin-reports-content > aside,
+.admin-reports-content > .admin-sidebar,
+.admin-reports-content > div:first-child {
+  width: 246px;
+  min-width: 246px;
+  flex-shrink: 0;
+  height: 100%;
+  position: fixed;
+  left: 0.9rem;
+  border-right: 1px solid #e0e0e0;
+  z-index: 1000;
+  background: white;
+}
+
+/* Ensure logo visibility */
+.admin-sidebar-logo,
+.admin-sidebar > img,
+.admin-sidebar > a > img {
+  position: relative;
+  z-index: 1001;
+}
+
+/* Main content area positioning */
+.admin-reports-main {
+  flex: 1;
+  padding: 20px;
+  margin-left: 260px; /* Match the sidebar width */
+  width: calc(100% - 260px);
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* Reports header styling */
+.admin-reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-reports-header h2 {
+  color: #2e7d32;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Controls for report generation */
+.admin-reports-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-reports-date-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-reports-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+}
+
+.admin-reports-generate-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.admin-reports-generate-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Tab navigation */
+.admin-reports-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.admin-reports-tab {
+  padding: 10px 16px;
+  border-radius: 6px 6px 0 0;
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.admin-reports-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-reports-tab.active {
+  background-color: #2e7d32;
+  color: white;
+}
+
+/* Main content area */
+.admin-reports-body {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Chart container styling */
+.admin-reports-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-reports-chart-container h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Flex row for charts and stats */
+.admin-reports-chart-row {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-reports-chart-half {
+  flex: 1;
+  min-width: 0; /* Allows flexbox to shrink below content size */
+}
+
+/* Stats display */
+.admin-reports-stats {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+.admin-reports-stat-item {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  width: 28%;
+}
+
+.admin-reports-stat-item h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.admin-reports-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #2e7d32;
+}
+
+/* Recommendations and analysis panels */
+.admin-reports-recommendations, 
+.admin-reports-seasonal-analysis {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #2e7d32;
+}
+
+.admin-reports-recommendations h4,
+.admin-reports-seasonal-analysis h4 {
+  margin: 0 0 10px 0;
+  color: #2e7d32;
+}
+
+.admin-reports-recommendations ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.admin-reports-recommendations li {
+  margin-bottom: 8px;
+}
+
+.admin-reports-seasonal-analysis p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Insight callout */
+.admin-reports-insight {
+  background-color: #e8f5e9;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Modal styling */
+.admin-reports-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.admin-reports-modal {
+  background-color: white;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-reports-modal h3 {
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  color: #2e7d32;
+}
+
+.admin-reports-modal-content {
+  padding: 20px;
+}
+
+.admin-reports-modal-field {
+  margin-bottom: 15px;
+}
+
+.admin-reports-modal-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.admin-reports-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.admin-reports-checkbox-group {
+  display: flex;
+  gap: 15px;
+}
+
+.admin-reports-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  gap: 10px;
+}
+
+.admin-reports-modal-cancel {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-reports-modal-export {
+  padding: 8px 16px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-reports-modal-export:hover {
+  background-color: #1b5e20;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .admin-reports-chart-row {
+    flex-direction: column;
+  }
+  
+  .admin-reports-chart-half {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-reports-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .admin-reports-content > aside,
+  .admin-reports-content > .admin-sidebar,
+  .admin-reports-content > div:first-child {
+    display: none; /* Hide sidebar on mobile */
+  }
+  
+  .admin-reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-reports-controls {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .admin-reports-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+}

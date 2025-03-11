@@ -1,10 +1,10 @@
-// AdminLogin.jsx
+// StateLogin.jsx
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
-import "./AdminLogin.css";
+import "./StateLogin.css";
 
-const AdminLogin = () => {
+const StateLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
@@ -18,7 +18,7 @@ const AdminLogin = () => {
     console.log("Remember Me:", rememberMe);
     
     if (username && password) {
-      navigate('/admin-dashboard');
+      navigate('/state-admin-dashboard');
     } else {
       alert("Please enter both username and password");
     }
@@ -29,41 +29,41 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="adminlogin-wrapper">
-      <div className="adminlogin-left">
+    <div className="state-login-wrapper">
+      <div className="state-login-left">
         <img
           src="/studentlogin.png"
           alt="Books and Learning"
-          className="adminlogin-image"
+          className="state-login-image"
         />
       </div>
-      <div className="adminlogin-right">
+      <div className="state-login-right">
         <img
           src="/logo.png"
           alt="Logo"
-          className="adminlogin-logo-image"
+          className="state-login-logo-image"
         />
-        <p className="adminlogin-subtitle">Welcome School Admin, Please enter your details</p>
-        <p className="adminlogin-subsubtitle">Sign in to manage your Digital Library</p>
-        <form className="adminlogin-form" onSubmit={handleLogin}>
-          <div className="adminlogin-field">
-            <label htmlFor="username" className="adminlogin-label">Username</label>
+        <p className="state-login-subtitle">Welcome State Authority, Please enter your details</p>
+        <p className="state-login-subsubtitle">Sign in to manage your State Digital Library</p>
+        <form className="state-login-form" onSubmit={handleLogin}>
+          <div className="state-login-field">
+            <label htmlFor="username" className="state-login-label">Username</label>
             <input
               type="text"
               id="username"
-              className="adminlogin-input"
+              className="state-login-input"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Username"
             />
           </div>
-          <div className="adminlogin-field">
-            <label htmlFor="password" className="adminlogin-label">Password</label>
+          <div className="state-login-field">
+            <label htmlFor="password" className="state-login-label">Password</label>
             <div className="password-input-wrapper">
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
-                className="adminlogin-input"
+                className="state-login-input"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
@@ -82,8 +82,8 @@ const AdminLogin = () => {
               </button>
             </div>
           </div>
-          <div className="adminlogin-options">
-            <label className="adminlogin-rememberme">
+          <div className="state-login-options">
+            <label className="state-login-rememberme">
               <input
                 type="checkbox"
                 checked={rememberMe}
@@ -91,15 +91,15 @@ const AdminLogin = () => {
               />
               <span className="remember-text">Remember Me</span>
             </label>
-            <Link to="/admin-forgot-password" className="adminlogin-forgot">
+            <Link to="/state-forgot-password" className="state-login-forgot">
               Forgot Password?
             </Link>
           </div>
-          <button type="submit" className="adminlogin-button">Login</button>
+          <button type="submit" className="state-login-button">Login</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default AdminLogin;
+export default StateLogin;

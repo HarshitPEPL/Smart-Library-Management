@@ -1,259 +1,259 @@
 .LandingPage-container {
-    min-height: 100vh;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(126, 203, 137, 0.3));
-    font-family: Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(126, 203, 137, 0.3));
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: url('/wave-bg.png');
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.LandingPage-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/library-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  z-index: -2;
+}
+
+.LandingPage-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(205, 245, 205, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.LandingPage-logo {
+  display: flex;
+  align-items: center;
+}
+
+.LandingPage-logo-image {
+  width: 120px;
+  height: auto;
+}
+
+.LandingPage-nav-links {
+  display: flex;
+  gap: 6rem;
+}
+
+.LandingPage-nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.LandingPage-nav-link:hover {
+  color: #008000;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.LandingPage-login-btn {
+  background-color: #008000;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.LandingPage-login-btn:hover {
+  background-color: #006400;
+  transform: translateY(-2px);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  background-color: #008000;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.admin-dropdown {
+  left: 0;
+  right: auto;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: none;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #006400;
+}
+
+.LandingPage-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.central-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.central-logo-image {
+  width: 300px;
+  height: auto;
+  margin-bottom: -10px;
+}
+
+.LandingPage-subtitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.search-container {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #008000;
+  box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.1);
+}
+
+.search-button {
+  padding: 0.9rem 2rem;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.search-button:hover {
+  background-color: #006400;
+}
+
+@media (max-width: 992px) {
+  .LandingPage-nav-links {
+    gap: 3rem;
   }
-  
-  .LandingPage-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.15;
-    z-index: -9999;
-  }
-  
+}
+
+@media (max-width: 768px) {
   .LandingPage-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .LandingPage-logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .LandingPage-logo-image {
-    max-width: 70%;
-    height: auto;
-    width: 120px;
+    flex-direction: column;
+    padding: 1rem;
   }
   
   .LandingPage-nav-links {
-    display: flex;
-    gap: 6rem;
+    display: none;
   }
   
-  .LandingPage-nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-    
-  }
-  
-  .LandingPage-nav-link:hover {
-    color: #008000;
-  }
-  
-  .LandingPage-login-btn {
-    background-color: #008000;
-    color: white;
-    border: none;
-    padding: 0.75rem 2rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  .LandingPage-login-btn:hover {
-    background-color: #006400;
-    transform: translateY(-2px);
-  }
-  
-  .LandingPage-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .login-buttons {
+    margin-top: 1rem;
+    width: 100%;
     justify-content: center;
-    padding: 6rem 2rem;
-    text-align: center;
   }
   
-  .LandingPage-content {
-    margin-bottom: 3rem;
-    max-width: 800px;
+  .central-logo-image {
+    width: 200px;
   }
   
-  .LandingPage-title {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .LandingPage-title-primary {
-    color: #008000;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .LandingPage-title-secondary {
-    color: #333;
-    font-size: 3rem;
-    font-weight: bold;
+  .central-title {
+    font-size: 2.5rem;
   }
   
   .LandingPage-subtitle {
-    font-size: 1.5rem;
-    color: #666;
-    margin-bottom: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
   }
   
-  .LandingPage-search {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
+  .dropdown-menu {
+    width: 180px;
   }
   
-  .LandingPage-search-input {
-    padding: 1rem 1.5rem;
-    width: 400px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+  .search-container {
+    flex-direction: column;
+    gap: 0.5rem;
   }
   
-  .LandingPage-search-input:focus {
-    outline: none;
-    border-color: #008000;
-    box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.1);
-  }
-  
-  .LandingPage-search-btn {
-    background-color: #008000;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  
-  .LandingPage-search-btn:hover {
-    background-color: #006400;
-    transform: translateY(-2px);
-  }
-  
-  .LandingPage-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    border-radius: 10px;
-    min-width: 200px;
-    z-index: 1000;
-    margin-top: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .LandingPage-dropdown-item {
+  .search-input, .search-button {
     width: 100%;
-    padding: 1rem 1.5rem;
-    border: none;
-    background: none;
-    text-align: left;
-    cursor: pointer;
-    color: #333;
-    transition: all 0.3s ease;
-    font-size: 1rem;
+    border-radius: 25px;
   }
-  
-  .LandingPage-dropdown-item:hover {
-    background-color: #f5f5f5;
-    color: #008000;
-  }
-  
-  @media (max-width: 768px) {
-    .LandingPage-nav-links {
-      display: none;
-    }
-    
-    .LandingPage-title-primary {
-      font-size: 2.5rem;
-    }
-    
-    .LandingPage-title-secondary {
-      font-size: 2rem;
-    }
-    
-    .LandingPage-search-input {
-      width: 250px;
-    }
-    
-    .LandingPage-main {
-      padding: 4rem 1rem;
-    }
-  }
-
-
-  /* ... (keep all existing CSS) ... */
-
-.LandingPage-login-dropdown {
-    position: relative;
-  }
-  
-  .LandingPage-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #008000;
-    border-radius: 8px;
-    min-width: 200px;
-    z-index: 1000;
-    margin-top: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .LandingPage-dropdown-item {
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background: none;
-    text-align: center;
-    cursor: pointer;
-    color: white;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .LandingPage-dropdown-item:last-child {
-    border-bottom: none;
-  }
-  
-  .LandingPage-dropdown-item:hover {
-    background-color: #006400;
-  }
-  
-  /* Ensuring dropdown appears on top of other elements */
-  .LandingPage-login-dropdown {
-    z-index: 1000;
-  }
-  
-  /* Add responsiveness for mobile */
-  @media (max-width: 768px) {
-    .LandingPage-dropdown-menu {
-      right: 0;
-      width: 180px;
-    }
-  }
+}

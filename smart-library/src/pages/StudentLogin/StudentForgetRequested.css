@@ -38,15 +38,15 @@
   }
   
   .studentforget-requested-logo-image {
-    width: 100px;
+    width: 105px;
     height: auto;
     display: block;
     margin: 0 auto 1rem;
     position: relative;
-    bottom: 1rem;
+    bottom: 0rem;
   }
   
-  .success-icon {
+  .student-forget-requested-success-icon {
     margin: 2rem 0;
     animation: scaleIn 0.5s ease-out;
   }

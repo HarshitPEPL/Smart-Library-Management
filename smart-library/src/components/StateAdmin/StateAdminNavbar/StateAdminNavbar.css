@@ -1,0 +1,448 @@
+.StateAdmin-Navbar-container {
+    background-color: white;
+    padding: 12px 12px;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: 99%;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .StateAdmin-Navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+    left: 8rem;
+  }
+  
+  .StateAdmin-Search-section {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 9999px;
+    padding: 4px;
+    gap: 8px;
+    width: 600px;
+  }
+  
+  .StateAdmin-Select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .StateAdmin-Category-select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 8px 32px 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .StateAdmin-Select-icon {
+    position: absolute;
+    right: 8px;
+    pointer-events: none;
+    color: #666;
+  }
+  
+  .StateAdmin-Search-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .StateAdmin-Search-input {
+    width: 100%;
+    padding: 8px 40px 8px 16px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .StateAdmin-Search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #22c55e;
+    cursor: pointer;
+  }
+  
+  .StateAdmin-Nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .StateAdmin-Nav-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 16px;
+    background-color: white;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+    position: relative;
+    right: 3rem;
+  }
+  
+  .StateAdmin-Nav-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .StateAdmin-Profile-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px 4px 4px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+    position: relative;
+    right: 1rem;
+  }
+  
+  .StateAdmin-Profile-button:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .StateAdmin-Profile-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .StateAdmin-Dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .StateAdmin-Dropdown-content {
+    display: none;
+    position: absolute;
+    top: 105%;
+    right: 20%;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  .StateAdmin-Dropdown:hover .StateAdmin-Dropdown-content {
+    display: block;
+  }
+  
+  .StateAdmin-Dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    text-align: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .StateAdmin-Dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Logout section */
+  .StateAdminLogout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .StateAdminLogout-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .StateAdminLogout-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .StateAdminLogout-message {
+    margin-bottom: 1.5rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+    top: 1rem;
+  }
+  
+  .StateAdminLogout-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 4rem;
+  }
+  
+  .StateAdminLogout-cancel-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+  
+  .StateAdminLogout-cancel-btn:hover {
+    background: #f5f5f5;
+    color: #333333;
+  }
+  
+  .StateAdminLogout-confirm-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #ff3333;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .StateAdminLogout-confirm-btn:hover {
+    background: #e60000;
+  }
+  
+  /* Profile section */
+  .StateAdminProfile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .StateAdminProfile-modal {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .StateAdminProfile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  
+  .StateAdminProfile-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #22c55e;
+    margin: 0;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #2563eb;
+  }
+  
+  .StateAdminProfile-subtitle {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 1rem 0;
+  }
+  
+  .StateAdminProfile-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 3px;
+    transition: transform 0.2s ease;
+  }
+  
+  .StateAdminProfile-close-btn:hover {
+    transform: rotate(90deg);
+  }
+  
+  .StateAdminProfile-top-section {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .StateAdminProfile-avatar-container {
+    flex: 0 0 auto;
+  }
+  
+  .StateAdminProfile-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    border: #b92626;
+    object-fit: cover;
+    position: relative;
+    left: 1rem;
+  }
+  
+  .StateAdminProfile-stats {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    position: relative;
+    left: 5rem;
+  }
+  
+  .StateAdminProfile-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .StateAdminProfile-stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .StateAdminProfile-stat-card:hover::after {
+    transform: translateX(0);
+  }
+  
+  .StateAdminProfile-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .StateAdminProfile-stat-card.readings {
+    background-color: #22c55e;
+  }
+  
+  .StateAdminProfile-stat-card.wishlist {
+    background-color: #dc2626;
+  }
+  
+  .StateAdminProfile-stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .StateAdminProfile-stat-content h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .StateAdminProfile-stat-content p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  .StateAdminProfile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .StateAdminProfile-form-row {
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  .StateAdminProfile-form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+  
+  .StateAdminProfile-form-group label {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .StateAdminProfile-form-group input {
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    background-color: #f9fafb;
+    color: #374151;
+    cursor: default;
+    user-select: none;
+  }
+  
+  .StateAdminProfile-form-group input:read-only {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+  
+  .StateAdminProfile-update-btn {
+    align-self: flex-start;
+    padding: 0.5rem 1.25rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    transition: all 0.3s ease;
+  }
+  
+  .StateAdminProfile-update-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+  }
+  
+  .StateAdminProfile-update-btn:active {
+    transform: translateY(0);
+  }

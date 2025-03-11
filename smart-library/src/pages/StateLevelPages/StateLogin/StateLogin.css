@@ -1,24 +1,24 @@
-.adminlogin-wrapper {
+.state-login-wrapper {
     display: flex;
     height: 100vh;
     background: linear-gradient(45deg, #EFFAF1, #7ecb89);
   }
   
-  .adminlogin-left {
+  .state-login-left {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .adminlogin-image {
+  .state-login-image {
     width: 60%;
     height: 80%;
     position: relative;
     right: 8rem;
   }
   
-  .adminlogin-right {
+  .state-login-right {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     font-family: 'Inter', sans-serif;
   }
   
-  .adminlogin-logo-image {
+  .state-login-logo-image {
     width: 100px;
     height: auto;
     display: block;
@@ -46,7 +46,7 @@
     bottom: 1rem;
   }
   
-  .adminlogin-subtitle {
+  .state-login-subtitle {
     font-size: 0.9rem;
     color: #4D4D4D;
     margin-bottom: 1rem;
@@ -56,7 +56,7 @@
     white-space: nowrap;
   }
   
-  .adminlogin-subsubtitle {
+  .state-login-subsubtitle {
     font-size: 0.8rem;
     position: relative;
     bottom: 15px;
@@ -66,17 +66,17 @@
     bottom: 1.5rem;
   }
   
-  .adminlogin-form {
+  .state-login-form {
     width: 100%;
     max-width: 400px;
   }
   
-  .adminlogin-field {
+  .state-login-field {
     margin-bottom: 1.5rem;
     color: #ba5151;
   }
   
-  .adminlogin-label {
+  .state-login-label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -84,7 +84,7 @@
     font-size: 0.9rem;
   }
   
-  .adminlogin-input {
+  .state-login-input {
     width: 100%;
     padding: 0.75rem;
     padding-right: 2.5rem;
@@ -95,12 +95,12 @@
     opacity: 50%;
   }
   
-  .adminlogin-input:focus {
+  .state-login-input:focus {
     border-color: #42bb4e;
     box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
   }
   
-  .adminlogin-options {
+  .state-login-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,7 +108,7 @@
     width: 100%;
   }
   
-  .adminlogin-rememberme input {
+  .state-login-rememberme input {
     margin-right: 0.5rem;
     width: 10px;
     height: 10px;
@@ -122,7 +122,7 @@
     bottom: 5px;
   }
   
-  .adminlogin-forgot {
+  .state-login-forgot {
     color: #4D4D4D;
     text-decoration: underline;
     font-size: 0.8rem;
@@ -130,11 +130,11 @@
     bottom: 5px;
   }
   
-  .adminlogin-forgot:hover {
+  .state-login-forgot:hover {
     text-decoration: underline;
   }
   
-  .adminlogin-button {
+  .state-login-button {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -146,7 +146,7 @@
     transition: background-color 0.3s;
   }
   
-  .adminlogin-button:hover {
+  .state-login-button:hover {
     background-color: #20812a;
   }
   

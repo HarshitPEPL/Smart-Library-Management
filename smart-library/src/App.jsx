@@ -13,7 +13,9 @@ import StudentCatalogue from "./pages/StudentCatalogue/StudentCatalogue";
 import StudentOurLegends from "./pages/StudentOurLegends/StudentOurLegends";
 import StudentWishlist from "./pages/StudentWishlist/StudentWishlist";      
 import StudentBookDescription from "./pages/StudentBookDescription/StudentBookDescription";
+
 import LandingPage from "./pages/LandingPage";
+
 import AdminLogin from "./pages/AdminPages/AdminLogin/AdminLogin";
 import AdminForget from "./pages/AdminPages/AdminLogin/AdminForget";
 import AdminForgetRequested from "./pages/AdminPages/AdminLogin/AdminForgetRequested";
@@ -23,6 +25,13 @@ import AdminAssetManagement from "./pages/AdminPages/AdminAssetManagement/AdminA
 import AdminUserManagement from "./pages/AdminPages/AdminUserManagement/AdminUserManagement";
 import AdminBorrowReturn from "./pages/AdminPages/AdminBorrowReturn/AdminBorrowReturn";
 import AdminAnnouncements from "./pages/AdminPages/AdminAnnouncements/AdminAnnouncements";
+import AdminReports from "./pages/AdminPages/AdminReports/AdminReports";
+
+import StateLogin from "./pages/StateLevelPages/StateLogin/StateLogin";
+import StateForget from "./pages/StateLevelPages/StateLogin/StateForget";
+import StateForgetRequested from "./pages/StateLevelPages/StateLogin/StateForgetRequested";
+import StateDashboard from "./pages/StateLevelPages/StateDashboard/StateDashboard";
+import StateTotalDistricts from "./pages/StateLevelPages/StateDashboard/StateTotalDistricts";
 
 function App() {
   return (
@@ -44,6 +53,7 @@ function App() {
         <Route path="/student-book-description" element={<StudentBookDescription />} />
         <Route path="/student-login" element={<StudentLogin />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/admin-reports" element={<AdminReports />} />
 
         {/* Landing page */}
         <Route path="/" element={<LandingPage />} />
@@ -58,6 +68,13 @@ function App() {
         <Route path="/admin-user-management" element={<AdminUserManagement />} />
         <Route path="/admin-borrow-return" element={<AdminBorrowReturn />} />
         <Route path="/admin-announcements" element={<AdminAnnouncements />} />
+
+        {/* State Level Routes */}
+        <Route path="/state-admin-login" element={<StateLogin />} />
+        <Route path="/state-forgot-password" element={<StateForget />} />
+        <Route path="/state-reset-requested" element={<StateForgetRequested />} />
+        <Route path="/state-admin-dashboard" element={<StateDashboard />} />
+        <Route path="/state-total-districts" element={<StateTotalDistricts />} />
       </Routes>
     </Router>
   );

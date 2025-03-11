@@ -25,7 +25,7 @@ const StudentForgetRequested = () => {
           alt="Logo"
           className="studentforget-requested-logo-image"
         />
-        <div className="success-icon">
+        <div className="student-forget-requested-success-icon">
           <CheckCircle size={64} color="#42bb4e" />
         </div>
         <h2 className="studentforget-requested-title">Request Sent Successfully!</h2>
