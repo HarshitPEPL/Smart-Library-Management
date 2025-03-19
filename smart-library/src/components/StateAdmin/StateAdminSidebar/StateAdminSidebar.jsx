@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, BookOpen, Package, Users, RepeatIcon, Bell, FileBarChart } from 'lucide-react';
+import { Home, BookOpen, Package, Users, RepeatIcon, Bell, FileBarChart, BookTypeIcon, BookCheckIcon } from 'lucide-react';
 import './StateAdminSidebar.css';
 
 const StateAdminSidebar = () => {
@@ -13,6 +13,7 @@ const StateAdminSidebar = () => {
     { label: 'Asset Management', path: '/state-admin-asset-management', icon: <Package size={20} /> },
     { label: 'User Management', path: '/state-admin-user-management', icon: <Users size={20} /> },
     { label: 'Borrow & Return', path: '/state-admin-borrow-return', icon: <RepeatIcon size={20} /> },
+    { label: 'Catalogue', path: '/state-admin-catalogue', icon: <BookCheckIcon size={20} /> },
     { label: 'Announcements', path: '/state-admin-announcements', icon: <Bell size={20} /> },
     { label: 'Reports', path: '/state-admin-reports', icon: <FileBarChart size={20} /> }
   ];

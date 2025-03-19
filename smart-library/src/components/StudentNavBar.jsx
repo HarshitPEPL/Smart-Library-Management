@@ -168,17 +168,7 @@ const StudentNavBar = () => {
     <div className="Student-Navbar-container">
       <div className="Student-Navbar-content">
         <div className="Student-Search-section">
-          <div className="Student-Select-wrapper">
-            <select defaultValue="all" className="Student-Category-select">
-              <option value="all">All</option>
-              <option value="recommended">Recommended</option>
-              <option value="recent">Recent</option>
-              <option value="ebook">E-Books</option>
-              <option value="audiobook">Audio Books</option>
-              <option value="visualbook">Visual Contents</option>
-            </select>
-            <ChevronDown size={16} className="Student-Select-icon" />
-          </div>
+          
           <div className="Student-Search-wrapper">
             <input type="text" placeholder="Search" className="Student-Search-input" />
             <Search className="Student-Search-icon" size={20} />
@@ -186,16 +176,6 @@ const StudentNavBar = () => {
         </div>
 
         <div className="Student-Nav-buttons">
-          <div className="Student-Dropdown">
-            <button className="Student-Nav-button">
-              Browse <ChevronDown size={16} />
-            </button>
-            <div className="Student-Dropdown-content">
-              <button className='Student-Dropdown-item'>Academic</button>
-              <button className='Student-Dropdown-item'>Non-Academic</button>
-            </div>
-          </div>
-
           <div className="Student-Dropdown">
             <button className="Student-Nav-button">
               Portals <ChevronDown size={16} />

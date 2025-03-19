@@ -366,15 +366,15 @@
 }
 
 .State-Dashboard-Ticket-Label {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .State-Dashboard-Ticket-Value {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -386,10 +386,12 @@
 
 .State-Dashboard-Ticket-Value.opened {
   background-color: #9E9E9E;
+  margin-top: 2rem;
 }
 
 .State-Dashboard-Ticket-Value.closed {
   background-color: #4CAF50;
+  margin-top: 2rem;
 }
 
 .State-Dashboard-Ticket-Legend {

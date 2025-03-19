@@ -1,24 +1,24 @@
-.state-forget-requested-wrapper {
+.librarian-forget-requested-wrapper {
     display: flex;
     height: 100vh;
     background: linear-gradient(45deg, #EFFAF1, #7ecb89);
   }
   
-  .state-forget-requested-left {
+  .librarian-forget-requested-left {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .state-forget-requested-image {
+  .librarian-forget-requested-image {
     width: 60%;
     height: 80%;
     position: relative;
     right: 8rem;
   }
   
-  .state-forget-requested-right {
+  .librarian-forget-requested-right {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     font-family: 'Inter', sans-serif;
   }
   
-  .state-forget-requested-logo-image {
+  .librarian-forget-requested-logo-image {
     width: 100px;
     height: auto;
     display: block;
@@ -46,7 +46,7 @@
     bottom: 1rem;
   }
   
-  .state-forget-requested-subtitle {
+  .librarian-forget-requested-subtitle {
     font-size: 0.9rem;
     color: #4D4D4D;
     margin-bottom: 2rem;
@@ -55,7 +55,7 @@
     bottom: 0.7rem;
   }
   
-  .state-forget-requested-subsubtitle {
+  .librarian-forget-requested-subsubtitle {
     font-size: 0.8rem;
     position: relative;
     bottom: 15px;
@@ -65,18 +65,18 @@
     bottom: 1.5rem;
   }
   
-  .state-forget-requested-form {
+  .librarian-forget-requested-form {
     width: 100%;
     max-width: 400px;
   }
   
-  .state-forget-requested-otp-container {
+  .librarian-forget-requested-otp-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
   }
   
-  .state-forget-requested-otp-input {
+  .librarian-forget-requested-otp-input {
     width: 60px;
     height: 60px;
     text-align: center;
@@ -88,17 +88,17 @@
     opacity: 0.8;
   }
   
-  .state-forget-requested-otp-input:focus {
+  .librarian-forget-requested-otp-input:focus {
     border-color: #42bb4e;
     box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
   }
   
-  .state-forget-requested-field {
+  .librarian-forget-requested-field {
     margin-bottom: 1.5rem;
-    color: #ba5151;
+    color: #4D4D4D;
   }
   
-  .state-forget-requested-label {
+  .librarian-forget-requested-label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -106,7 +106,7 @@
     font-size: 0.9rem;
   }
   
-  .state-forget-requested-input {
+  .librarian-forget-requested-input {
     width: 100%;
     padding: 0.75rem;
     font-size: 0.8rem;
@@ -116,12 +116,12 @@
     opacity: 50%;
   }
   
-  .state-forget-requested-input:focus {
+  .librarian-forget-requested-input:focus {
     border-color: #42bb4e;
     box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
   }
   
-  .state-forget-requested-button {
+  .librarian-forget-requested-button {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -134,21 +134,21 @@
     margin-bottom: 1rem;
   }
   
-  .state-forget-requested-button:hover {
+  .librarian-forget-requested-button:hover {
     background-color: #20812a;
   }
   
-  .state-forget-requested-back {
+  .librarian-forget-requested-back {
     text-align: center;
     margin-top: 1rem;
   }
   
-  .state-forget-requested-back-link {
+  .librarian-forget-requested-back-link {
     color: #4D4D4D;
     text-decoration: underline;
     font-size: 0.8rem;
   }
   
-  .state-forget-requested-back-link:hover {
+  .librarian-forget-requested-back-link:hover {
     text-decoration: underline;
-  } 
+  }

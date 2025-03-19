@@ -1,0 +1,490 @@
+.librarian-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.librarian-dashboard-layout {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 60px); /* Assuming navbar is 60px height */
+}
+
+.librarian-dashboard-main {
+  flex: 1;
+  padding: 20px 30px;
+  overflow-y: auto;
+  margin-left: 250px; /* Width of sidebar */
+  margin-top: 4rem;
+  width: calc(100% - 250px);
+}
+
+.librarian-dashboard-welcome {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Key Metrics Styles */
+.librarian-dashboard-metrics-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.librarian-dashboard-metric-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.librarian-dashboard-metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.librarian-dashboard-metric-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.librarian-dashboard-metric-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.librarian-dashboard-metric-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+.librarian-dashboard-metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.librarian-dashboard-metric-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.librarian-dashboard-books {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.librarian-dashboard-issued {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+.librarian-dashboard-overdue {
+  background-color: #fff2e8;
+  color: #fa541c;
+}
+
+/* Charts Section Styles */
+.librarian-dashboard-charts-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.librarian-dashboard-chart-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.librarian-dashboard-chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.librarian-dashboard-chart-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+
+/* Format Distribution Chart */
+.librarian-dashboard-format-chart, .librarian-dashboard-asset-chart {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.librarian-dashboard-donut-chart {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #33a852 0deg 95deg,
+    #4caf50 95deg 215deg,
+    #8e8e8e 215deg 285deg,
+    #a8a8a8 285deg 360deg
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.librarian-dashboard-condition-chart {
+  background: conic-gradient(
+    #4caf50 0deg 355deg,
+    #8e8e8e 355deg 360deg
+  );
+}
+
+.librarian-dashboard-chart-center {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.librarian-dashboard-chart-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.librarian-dashboard-chart-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.librarian-dashboard-format-legend, .librarian-dashboard-asset-legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.librarian-dashboard-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.librarian-dashboard-legend-color {
+  width: 20px;
+  height: 3px;
+  border-radius: 1px;
+}
+
+.librarian-dashboard-hard-copy, .librarian-dashboard-total-assets {
+  background-color: #4caf50;
+}
+
+.librarian-dashboard-ebooks {
+  background-color: #33a852;
+}
+
+.librarian-dashboard-audio-books {
+  background-color: #8e8e8e;
+}
+
+.librarian-dashboard-visual-content {
+  background-color: #a8a8a8;
+}
+
+.librarian-dashboard-for-repair {
+  background-color: #8e8e8e;
+}
+
+.librarian-dashboard-legend-text {
+  font-size: 14px;
+  color: #666;
+  flex: 1;
+}
+
+.librarian-dashboard-legend-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Bottom Row Styles */
+.librarian-dashboard-bottom-row {
+  display: flex;
+  gap: 20px;
+}
+
+.librarian-dashboard-trends-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.librarian-dashboard-trends-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.librarian-dashboard-trends-legend {
+  display: flex;
+  gap: 15px;
+}
+
+.librarian-dashboard-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.librarian-dashboard-student {
+  background-color: #4caf50;
+}
+
+.librarian-dashboard-teacher {
+  background-color: #a8d8ad;
+}
+
+.librarian-dashboard-trends-options {
+  color: #666;
+  cursor: pointer;
+}
+
+.librarian-dashboard-trends-chart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.librarian-dashboard-bar-chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.librarian-dashboard-bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
+
+.librarian-dashboard-bar {
+  width: 20px;
+  margin: 0 2px;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.3s ease;
+}
+
+.librarian-dashboard-student-bar {
+  background-color: #4caf50;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 10px);
+  z-index: 2;
+}
+
+.librarian-dashboard-teacher-bar {
+  background-color: #a8d8ad;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% + 10px);
+  z-index: 2;
+}
+
+.librarian-dashboard-bar-label {
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Tickets Section */
+.librarian-dashboard-tickets-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.librarian-dashboard-tickets-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.librarian-dashboard-tickets-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.librarian-dashboard-ticket-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.librarian-dashboard-ticket-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.librarian-dashboard-ticket-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.librarian-dashboard-ticket-circle:hover {
+  transform: scale(1.05);
+}
+
+.librarian-dashboard-opened {
+  background-color: #8e8e8e;
+  color: white;
+}
+
+.librarian-dashboard-closed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.librarian-dashboard-ticket-number {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.librarian-dashboard-tickets-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .librarian-dashboard-main {
+    margin-left: 200px; /* Smaller sidebar width */
+    width: calc(100% - 200px);
+  }
+  
+  .librarian-dashboard-charts-row, 
+  .librarian-dashboard-bottom-row {
+    flex-direction: column;
+  }
+  
+  .librarian-dashboard-chart-content {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+  
+  .librarian-dashboard-format-chart, 
+  .librarian-dashboard-asset-chart {
+    margin-bottom: 20px;
+  }
+  
+  .librarian-dashboard-trends-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .librarian-dashboard-trends-options {
+    align-self: flex-end;
+  }
+  
+  .librarian-dashboard-bar {
+    width: 15px;
+  }
+  
+  .librarian-dashboard-student-bar {
+    left: calc(50% - 8px);
+  }
+  
+  .librarian-dashboard-teacher-bar {
+    left: calc(50% + 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .librarian-dashboard-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .librarian-dashboard-metrics-row {
+    flex-direction: column;
+  }
+  
+  .librarian-dashboard-metric-card {
+    margin-bottom: 10px;
+  }
+  
+  .librarian-dashboard-tickets-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .librarian-dashboard-ticket-item {
+    margin-bottom: 15px;
+  }
+  
+  .librarian-dashboard-bar {
+    width: 10px;
+  }
+  
+  .librarian-dashboard-student-bar {
+    left: calc(50% - 6px);
+  }
+  
+  .librarian-dashboard-teacher-bar {
+    left: calc(50% + 6px);
+  }
+  
+  .librarian-dashboard-bar-label {
+    font-size: 10px;
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+}

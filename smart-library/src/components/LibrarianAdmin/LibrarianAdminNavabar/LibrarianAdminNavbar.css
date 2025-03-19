@@ -1,4 +1,4 @@
-.Admin-Navbar-container {
+.LibrarianAdmin-Navbar-container {
     background-color: white;
     padding: 12px 12px;
     border-bottom: 1px solid #eee;
@@ -7,9 +7,10 @@
     top: 15px;
     left: 15px;
     z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   }
   
-  .Admin-Navbar-content {
+  .LibrarianAdmin-Navbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,23 +20,22 @@
     left: 8rem;
   }
   
-  .Admin-Search-section {
+  .LibrarianAdmin-Search-section {
     display: flex;
     align-items: center;
     background-color: #f5f5f5;
     border-radius: 9999px;
     padding: 4px;
     gap: 8px;
-    width: 40rem;
+    width: 600px;
   }
   
-  
-  .Admin-Search-wrapper {
+  .LibrarianAdmin-Search-wrapper {
     position: relative;
     flex-grow: 1;
   }
   
-  .Admin-Search-input {
+  .LibrarianAdmin-Search-input {
     width: 100%;
     padding: 8px 40px 8px 16px;
     border: none;
@@ -44,7 +44,7 @@
     outline: none;
   }
   
-  .Admin-Search-icon {
+  .LibrarianAdmin-Search-icon {
     position: absolute;
     right: 12px;
     top: 50%;
@@ -53,13 +53,13 @@
     cursor: pointer;
   }
   
-  .Admin-Nav-buttons {
+  .LibrarianAdmin-Nav-buttons {
     display: flex;
     align-items: center;
     gap: 20px;
   }
   
-  .Admin-Nav-button {
+  .LibrarianAdmin-Nav-button {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -75,11 +75,11 @@
     right: 3rem;
   }
   
-  .Admin-Nav-button:hover {
+  .LibrarianAdmin-Nav-button:hover {
     background-color: #f5f5f5;
   }
   
-  .Admin-Profile-button {
+  .LibrarianAdmin-Profile-button {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -95,23 +95,23 @@
     right: 1rem;
   }
   
-  .Admin-Profile-button:hover {
+  .LibrarianAdmin-Profile-button:hover {
     background-color: #e5e5e5;
   }
   
-  .Admin-Profile-image {
+  .LibrarianAdmin-Profile-image {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     object-fit: cover;
   }
   
-  .Admin-Dropdown {
+  .LibrarianAdmin-Dropdown {
     position: relative;
     display: inline-block;
   }
   
-  .Admin-Dropdown-content {
+  .LibrarianAdmin-Dropdown-content {
     display: none;
     position: absolute;
     top: 105%;
@@ -123,11 +123,11 @@
     z-index: 1;
   }
   
-  .Admin-Dropdown:hover .Admin-Dropdown-content {
+  .LibrarianAdmin-Dropdown:hover .LibrarianAdmin-Dropdown-content {
     display: block;
   }
   
-  .Admin-Dropdown-item {
+  .LibrarianAdmin-Dropdown-item {
     display: block;
     width: 100%;
     padding: 12px 16px;
@@ -137,12 +137,12 @@
     cursor: pointer;
   }
   
-  .Admin-Dropdown-item:hover {
+  .LibrarianAdmin-Dropdown-item:hover {
     background-color: #f5f5f5;
   }
   
-  /*log out section */
-  .AdminLogout-overlay {
+  /* Logout section */
+  .LibrarianAdminLogout-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -155,7 +155,7 @@
     z-index: 1000;
   }
   
-  .AdminLogout-modal {
+  .LibrarianAdminLogout-modal {
     background: white;
     padding: 2rem;
     border-radius: 8px;
@@ -164,7 +164,7 @@
     max-width: 400px;
   }
   
-  .AdminLogout-title {
+  .LibrarianAdminLogout-title {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -172,7 +172,7 @@
     text-align: center;
   }
   
-  .AdminLogout-message {
+  .LibrarianAdminLogout-message {
     margin-bottom: 1.5rem;
     color: #666;
     line-height: 1.5;
@@ -181,14 +181,14 @@
     top: 1rem;
   }
   
-  .AdminLogout-buttons {
+  .LibrarianAdminLogout-buttons {
     display: flex;
     justify-content: center;
     padding: 2rem;
     gap: 4rem;
   }
   
-  .AdminLogout-cancel-btn {
+  .LibrarianAdminLogout-cancel-btn {
     padding: 0.5rem 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -198,12 +198,12 @@
     transition: all 0.1s ease;
   }
   
-  .AdminLogout-cancel-btn:hover {
+  .LibrarianAdminLogout-cancel-btn:hover {
     background: #f5f5f5;
     color: #333333;
   }
   
-  .AdminLogout-confirm-btn {
+  .LibrarianAdminLogout-confirm-btn {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
@@ -213,12 +213,12 @@
     transition: all 0.2s ease;
   }
   
-  .AdminLogout-confirm-btn:hover {
+  .LibrarianAdminLogout-confirm-btn:hover {
     background: #e60000;
   }
   
-  /* profile section */
-  .AdminProfile-overlay {
+  /* Profile section */
+  .LibrarianAdminProfile-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -228,41 +228,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
   }
   
-  .AdminProfile-modal {
+  .LibrarianAdminProfile-modal {
     background: white;
     padding: 1.25rem;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     width: 90%;
-    z-index: 9999;
     max-width: 600px;
   }
   
-  .AdminProfile-header {
+  .LibrarianAdminProfile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.25rem;
   }
   
-  .AdminProfile-title {
+  .LibrarianAdminProfile-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #166c35;
+    color: #22c55e;
     margin: 0;
     padding-bottom: 3px;
-    border-bottom: 2px solid #166c35;
+    border-bottom: 2px solid #2563eb;
   }
   
-  .AdminProfile-subtitle {
+  .LibrarianAdminProfile-subtitle {
     font-size: 1rem;
     color: #333;
     margin: 0 0 1rem 0;
   }
   
-  .AdminProfile-close-btn {
+  .LibrarianAdminProfile-close-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -271,21 +271,21 @@
     transition: transform 0.2s ease;
   }
   
-  .AdminProfile-close-btn:hover {
+  .LibrarianAdminProfile-close-btn:hover {
     transform: rotate(90deg);
   }
   
-  .AdminProfile-top-section {
+  .LibrarianAdminProfile-top-section {
     display: flex;
     gap: 1.25rem;
     margin-bottom: 1.25rem;
   }
   
-  .AdminProfile-avatar-container {
+  .LibrarianAdminProfile-avatar-container {
     flex: 0 0 auto;
   }
   
-  .AdminProfile-avatar {
+  .LibrarianAdminProfile-avatar {
     width: 65px;
     height: 65px;
     border-radius: 6px;
@@ -295,7 +295,7 @@
     left: 1rem;
   }
   
-  .AdminProfile-stats {
+  .LibrarianAdminProfile-stats {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
@@ -303,7 +303,7 @@
     left: 5rem;
   }
   
-  .AdminProfile-stat-card {
+  .LibrarianAdminProfile-stat-card {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -316,7 +316,7 @@
     overflow: hidden;
   }
   
-  .AdminProfile-stat-card::after {
+  .LibrarianAdminProfile-stat-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -328,64 +328,64 @@
     transition: transform 0.3s ease;
   }
   
-  .AdminProfile-stat-card:hover::after {
+  .LibrarianAdminProfile-stat-card:hover::after {
     transform: translateX(0);
   }
   
-  .AdminProfile-stat-card:hover {
+  .LibrarianAdminProfile-stat-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
   
-  .AdminProfile-stat-card.readings {
-    background-color: #1daf53;
+  .LibrarianAdminProfile-stat-card.readings {
+    background-color: #22c55e;
   }
   
-  .AdminProfile-stat-card.wishlist {
+  .LibrarianAdminProfile-stat-card.wishlist {
     background-color: #dc2626;
   }
   
-  .AdminProfile-stat-content {
+  .LibrarianAdminProfile-stat-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .AdminProfile-stat-content h2 {
+  .LibrarianAdminProfile-stat-content h2 {
     font-size: 1.5rem;
     margin: 0;
     line-height: 1;
   }
   
-  .AdminProfile-stat-content p {
+  .LibrarianAdminProfile-stat-content p {
     margin: 0;
     font-size: 0.875rem;
   }
   
-  .AdminProfile-form {
+  .LibrarianAdminProfile-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
   
-  .AdminProfile-form-row {
+  .LibrarianAdminProfile-form-row {
     display: flex;
     gap: 1.25rem;
   }
   
-  .AdminProfile-form-group {
+  .LibrarianAdminProfile-form-group {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.375rem;
   }
   
-  .AdminProfile-form-group label {
+  .LibrarianAdminProfile-form-group label {
     font-size: 0.875rem;
     color: #666;
   }
   
-  .AdminProfile-form-group input {
+  .LibrarianAdminProfile-form-group input {
     padding: 0.5rem;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
@@ -396,15 +396,15 @@
     user-select: none;
   }
   
-  .AdminProfile-form-group input:read-only {
+  .LibrarianAdminProfile-form-group input:read-only {
     opacity: 0.8;
     pointer-events: none;
   }
   
-  .AdminProfile-update-btn {
+  .LibrarianAdminProfile-update-btn {
     align-self: flex-start;
     padding: 0.5rem 1.25rem;
-    background-color: #f97316;
+    background-color: #2563eb;
     color: white;
     border: none;
     border-radius: 6px;
@@ -414,12 +414,12 @@
     transition: all 0.3s ease;
   }
   
-  .AdminProfile-update-btn:hover {
-    background-color: #ea580c;
+  .LibrarianAdminProfile-update-btn:hover {
+    background-color: #1d4ed8;
     transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
   }
   
-  .AdminProfile-update-btn:active {
+  .LibrarianAdminProfile-update-btn:active {
     transform: translateY(0);
   }

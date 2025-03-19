@@ -29,17 +29,7 @@ const AdminNavBar = () => {
     <div className="Admin-Navbar-container">
       <div className="Admin-Navbar-content">
         <div className="Admin-Search-section">
-          <div className="Admin-Select-wrapper">
-            <select defaultValue="all" className="Admin-Category-select">
-              <option value="all">All</option>
-              <option value="recommended">Recommended</option>
-              <option value="recent">Recent</option>
-              <option value="ebook">E-Books</option>
-              <option value="audiobook">Audio Books</option>
-              <option value="visualbook">Visual Contents</option>
-            </select>
-            <ChevronDown size={16} className="Admin-Select-icon" />
-          </div>
+          
           <div className="Admin-Search-wrapper">
             <input type="text" placeholder="Search" className="Admin-Search-input" />
             <Search className="Admin-Search-icon" size={20} />
@@ -47,15 +37,7 @@ const AdminNavBar = () => {
         </div>
 
         <div className="Admin-Nav-buttons">
-          <div className="Admin-Dropdown">
-            <button className="Admin-Nav-button">
-              Browse <ChevronDown size={16} />
-            </button>
-            <div className="Admin-Dropdown-content">
-              <button className='Admin-Dropdown-item'>Academic</button>
-              <button className='Admin-Dropdown-item'>Non-Academic</button>
-            </div>
-          </div>
+          
 
           <div className="Admin-Dropdown">
             <button className="Admin-Nav-button">

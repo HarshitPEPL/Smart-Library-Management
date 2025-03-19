@@ -29,17 +29,6 @@ const StateAdminNavbar = () => {
     <div className="StateAdmin-Navbar-container">
       <div className="StateAdmin-Navbar-content">
         <div className="StateAdmin-Search-section">
-          <div className="StateAdmin-Select-wrapper">
-            <select defaultValue="all" className="StateAdmin-Category-select">
-              <option value="all">All</option>
-              <option value="recommended">Recommended</option>
-              <option value="recent">Recent</option>
-              <option value="ebook">E-Books</option>
-              <option value="audiobook">Audio Books</option>
-              <option value="visualbook">Visual Contents</option>
-            </select>
-            <ChevronDown size={16} className="StateAdmin-Select-icon" />
-          </div>
           <div className="StateAdmin-Search-wrapper">
             <input type="text" placeholder="Search" className="StateAdmin-Search-input" />
             <Search className="StateAdmin-Search-icon" size={20} />
@@ -47,16 +36,6 @@ const StateAdminNavbar = () => {
         </div>
 
         <div className="StateAdmin-Nav-buttons">
-          <div className="StateAdmin-Dropdown">
-            <button className="StateAdmin-Nav-button">
-              Browse <ChevronDown size={16} />
-            </button>
-            <div className="StateAdmin-Dropdown-content">
-              <button className='StateAdmin-Dropdown-item'>Academic</button>
-              <button className='StateAdmin-Dropdown-item'>Non-Academic</button>
-            </div>
-          </div>
-
           <div className="StateAdmin-Dropdown">
             <button className="StateAdmin-Nav-button">
               Portals <ChevronDown size={16} />

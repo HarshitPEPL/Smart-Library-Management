@@ -1,0 +1,327 @@
+.State-Published-Container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.State-Published-Content {
+    display: flex;
+    flex: 1;
+}
+
+.State-Published-Main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    margin-top: 5rem;
+    transition: all 0.3s ease;
+}
+
+.State-Published-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.State-Published-Header h1 {
+    color: #333;
+    font-size: 24px;
+    margin: 0;
+}
+
+.State-Published-BackButton {
+    background-color: #008f42;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.State-Published-BackButton:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.State-Published-Table {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.State-Published-Table:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.State-Published-TableHeader {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.State-Published-DateHeader {
+    width: 20%;
+}
+
+.State-Published-AnnouncementHeader {
+    width: 60%;
+}
+
+.State-Published-ActionHeader {
+    width: 20%;
+    text-align: right;
+}
+
+.State-Published-TableRow {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+.State-Published-TableRow:hover {
+    background-color: #f9f9f9;
+}
+
+.State-Published-DateCell {
+    width: 20%;
+}
+
+.State-Published-Date {
+    font-weight: 500;
+    color: #333;
+}
+
+.State-Published-Time {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.State-Published-AnnouncementCell {
+    width: 60%;
+}
+
+.State-Published-Title {
+    font-weight: 500;
+    color: #444;
+}
+
+.State-Published-ActionCell {
+    width: 20%;
+    text-align: right;
+}
+
+.State-Published-DetailButton {
+    background-color: #00B050;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.State-Published-DetailButton:hover {
+    background-color: #008f42;
+    transform: translateY(-1px);
+}
+
+.State-Published-NoData {
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.State-Published-Pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.State-Published-PaginationButton {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.State-Published-PaginationButton:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+
+.State-Published-PaginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.State-Published-PaginationNumber {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.State-Published-PaginationNumber:hover {
+    background-color: #f0f0f0;
+}
+
+.State-Published-PaginationNumber.active {
+    background-color: #00B050;
+    color: white;
+    border-color: #00B050;
+}
+
+/* Modal Styling */
+.State-Published-ModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.State-Published-DetailModal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 600px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.State-Published-DetailModal h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.State-Published-DetailDate {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.State-Published-DetailDescription {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.State-Published-CloseButton {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: block;
+    margin-left: auto;
+}
+
+.State-Published-CloseButton:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .State-Published-Main {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .State-Published-TableHeader, 
+    .State-Published-TableRow {
+        flex-direction: column;
+    }
+    
+    .State-Published-DateHeader,
+    .State-Published-AnnouncementHeader,
+    .State-Published-ActionHeader,
+    .State-Published-DateCell,
+    .State-Published-AnnouncementCell,
+    .State-Published-ActionCell {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .State-Published-ActionCell {
+        text-align: center;
+    }
+    
+    .State-Published-DetailButton {
+        width: 100%;
+    }
+    
+    .State-Published-Pagination {
+        flex-wrap: wrap;
+    }
+}
+
+/* Animation for table rows */
+.State-Published-TableRow {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.State-Published-TableRow:hover {
+    transform: scale(1.01);
+}
+
+/* Improve focus states for accessibility */
+.State-Published-BackButton:focus,
+.State-Published-DetailButton:focus,
+.State-Published-PaginationButton:focus,
+.State-Published-PaginationNumber:focus,
+.State-Published-CloseButton:focus {
+    outline: 2px solid #00B050;
+    outline-offset: 2px;
+}

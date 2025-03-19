@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import "./StateForgetRequested.css";
+import "./LibrarianForgetRequested.css";
 
-const StateForgetRequested = () => {
+const LibrarianForgetRequested = () => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -69,39 +69,39 @@ const StateForgetRequested = () => {
     
     // In a real app, you would send the new password to your backend
     alert("Password reset successful!");
-    navigate('/state-admin-login');
+    navigate('/librarian-login');
   };
 
   return (
-    <div className="state-forget-requested-wrapper">
-      <div className="state-forget-requested-left">
+    <div className="librarian-forget-requested-wrapper">
+      <div className="librarian-forget-requested-left">
         <img
           src="/studentlogin.png"
-          alt="Books and Learning"
-          className="state-forget-requested-image"
+          alt="Library Books"
+          className="librarian-forget-requested-image"
         />
       </div>
-      <div className="state-forget-requested-right">
+      <div className="librarian-forget-requested-right">
         <img
           src="/logo.png"
           alt="Logo"
-          className="state-forget-requested-logo-image"
+          className="librarian-forget-requested-logo-image"
         />
         
         {step === 1 ? (
           <>
-            <p className="state-forget-requested-subtitle">Verify Your Email</p>
-            <p className="state-forget-requested-subsubtitle">
+            <p className="librarian-forget-requested-subtitle">Verify Your Email</p>
+            <p className="librarian-forget-requested-subsubtitle">
               We've sent a 4-digit code to {email}
             </p>
-            <form className="state-forget-requested-form" onSubmit={handleVerifyOtp}>
-              <div className="state-forget-requested-otp-container">
+            <form className="librarian-forget-requested-form" onSubmit={handleVerifyOtp}>
+              <div className="librarian-forget-requested-otp-container">
                 {otp.map((digit, index) => (
                   <input
                     key={index}
                     ref={inputRefs[index]}
                     type="text"
-                    className="state-forget-requested-otp-input"
+                    className="librarian-forget-requested-otp-input"
                     value={digit}
                     onChange={(e) => handleOtpChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
@@ -109,11 +109,11 @@ const StateForgetRequested = () => {
                   />
                 ))}
               </div>
-              <button type="submit" className="state-forget-requested-button">
+              <button type="submit" className="librarian-forget-requested-button">
                 Verify Code
               </button>
-              <div className="state-forget-requested-back">
-                <Link to="/state-forgot-password" className="state-forget-requested-back-link">
+              <div className="librarian-forget-requested-back">
+                <Link to="/librarian-forgot-password" className="librarian-forget-requested-back-link">
                   Back to Forgot Password
                 </Link>
               </div>
@@ -121,44 +121,44 @@ const StateForgetRequested = () => {
           </>
         ) : (
           <>
-            <p className="state-forget-requested-subtitle">Reset Your Password</p>
-            <p className="state-forget-requested-subsubtitle">
+            <p className="librarian-forget-requested-subtitle">Reset Your Password</p>
+            <p className="librarian-forget-requested-subsubtitle">
               Create a new secure password
             </p>
-            <form className="state-forget-requested-form" onSubmit={handleResetPassword}>
-              <div className="state-forget-requested-field">
-                <label htmlFor="newPassword" className="state-forget-requested-label">
+            <form className="librarian-forget-requested-form" onSubmit={handleResetPassword}>
+              <div className="librarian-forget-requested-field">
+                <label htmlFor="newPassword" className="librarian-forget-requested-label">
                   New Password
                 </label>
                 <input
                   type="password"
                   id="newPassword"
-                  className="state-forget-requested-input"
+                  className="librarian-forget-requested-input"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   placeholder="Enter new password"
                   required
                 />
               </div>
-              <div className="state-forget-requested-field">
-                <label htmlFor="confirmPassword" className="state-forget-requested-label">
+              <div className="librarian-forget-requested-field">
+                <label htmlFor="confirmPassword" className="librarian-forget-requested-label">
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   id="confirmPassword"
-                  className="state-forget-requested-input"
+                  className="librarian-forget-requested-input"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Confirm new password"
                   required
                 />
               </div>
-              <button type="submit" className="state-forget-requested-button">
+              <button type="submit" className="librarian-forget-requested-button">
                 Reset Password
               </button>
-              <div className="state-forget-requested-back">
-                <Link to="/state-login" className="state-forget-requested-back-link">
+              <div className="librarian-forget-requested-back">
+                <Link to="/librarian-login" className="librarian-forget-requested-back-link">
                   Back to Login
                 </Link>
               </div>
@@ -170,4 +170,4 @@ const StateForgetRequested = () => {
   );
 };
 
-export default StateForgetRequested;
+export default LibrarianForgetRequested;

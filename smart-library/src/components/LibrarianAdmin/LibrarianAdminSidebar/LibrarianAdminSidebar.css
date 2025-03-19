@@ -1,0 +1,100 @@
+.LibrarianAdminSidebar {
+    width: 240px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-y: auto;
+    left: 15px;
+    top: 15px;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+  }
+  
+  .LibrarianAdminSidebar-logo {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .LibrarianAdminSidebar-logoImage {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .LibrarianAdminSidebar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 100px);
+    padding: 0rem 0;
+  }
+  
+  .LibrarianAdminSidebar-mainMenu,
+  .LibrarianAdminSidebar-footerMenu {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .LibrarianAdminSidebar-navItem {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    gap: 1rem;
+    border-radius: 6px;
+    margin-bottom: 4px;
+  }
+  
+  .LibrarianAdminSidebar-navItem:hover {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+  }
+  
+  .LibrarianAdminSidebar-icon {
+    display: flex;
+    align-items: center;
+    color: #666;
+  }
+  
+  .LibrarianAdminSidebar-navItem:hover .LibrarianAdminSidebar-icon {
+    color: #1a1a1a;
+  }
+  
+  .LibrarianAdminSidebar-active {
+    background-color: #f0f7ff;
+    color: #339149;
+    font-weight: 500;
+  }
+  
+  .LibrarianAdminSidebar-active .LibrarianAdminSidebar-icon {
+    color: #339149;
+  }
+  
+  .LibrarianAdminSidebar-footerMenu {
+    margin-top: auto;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1rem;
+    position: relative;
+    bottom: 1rem;
+  }
+  
+  .LibrarianAdminSidebar-footerItem {
+    padding: 0.5rem 1.5rem;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .LibrarianAdminSidebar-footerItem:hover {
+    color: #1a1a1a;
+  }

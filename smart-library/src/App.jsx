@@ -32,6 +32,20 @@ import StateForget from "./pages/StateLevelPages/StateLogin/StateForget";
 import StateForgetRequested from "./pages/StateLevelPages/StateLogin/StateForgetRequested";
 import StateDashboard from "./pages/StateLevelPages/StateDashboard/StateDashboard";
 import StateTotalDistricts from "./pages/StateLevelPages/StateDashboard/StateTotalDistricts";
+import StateTotalSchools from "./pages/StateLevelPages/StateDashboard/StateTotalSchools";
+import StateBookInventory from "./pages/StateLevelPages/StateBookInventory/StateBookInventory"
+import StateAssetManagement from "./pages/StateLevelPages/StateAssetManagement/StateAssetManagement";
+import StateUserManagement from "./pages/StateLevelPages/StateUserManagement/StateUserManagement";
+import StateBorrowReturn from "./pages/StateLevelPages/StateBorrowReturn/StateBorrowReturn";
+import StateCatalogue from "./pages/StateLevelPages/StateCatalogue/StateCatalogue";
+import StateAdminAnnouncements from "./pages/StateLevelPages/StateAnnouncements/StateAdminAnnouncements";
+import StateAdminPublishedAnnouncements from "./pages/StateLevelPages/StateAnnouncements/StateAdminPublishedAnnouncements";
+
+import LibrarianLogin from "./pages/LibrarianPages/LibrarianLogin/LibrarianLogin"
+import LibrarianForget from "./pages/LibrarianPages/LibrarianLogin/LibrarianForget";
+import LibrarianForgetRequested from "./pages/LibrarianPages/LibrarianLogin/LibrarianForgetRequested";
+import LibrarianDashboard from "./pages/LibrarianPages/LibrarianDashboard/LibrarianDashboard"
+
 
 function App() {
   return (
@@ -75,6 +89,20 @@ function App() {
         <Route path="/state-reset-requested" element={<StateForgetRequested />} />
         <Route path="/state-admin-dashboard" element={<StateDashboard />} />
         <Route path="/state-total-districts" element={<StateTotalDistricts />} />
+        <Route path="/state-total-schools" element={<StateTotalSchools />} />
+        <Route path="/state-admin-books-inventory" element={<StateBookInventory />} />
+        <Route path="/state-admin-asset-management" element={<StateAssetManagement />} />
+        <Route path="/state-admin-user-management" element={<StateUserManagement />} />
+        <Route path="/state-admin-borrow-return" element={<StateBorrowReturn />} />
+        <Route path="/state-admin-catalogue" element={<StateCatalogue />} />
+        <Route path="/state-admin-announcements" element={<StateAdminAnnouncements />} />
+        <Route path="/state-admin-published-announcements" element={<StateAdminPublishedAnnouncements />} />
+
+        {/* Librarian Level Routes */}
+        <Route path="/librarian-login" element={<LibrarianLogin />} />
+        <Route path="/librarian-forgot-password" element={<LibrarianForget />} />
+        <Route path="/librarian-reset-requested" element={<LibrarianForgetRequested />} />
+        <Route path="/librarian-dashboard" element={<LibrarianDashboard />} />
       </Routes>
     </Router>
   );

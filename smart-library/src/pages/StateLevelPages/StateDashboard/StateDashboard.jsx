@@ -16,7 +16,7 @@ const StateDashboard = () => {
 
   const navigateToSchools = () => {
     // Add your navigation logic here
-    console.log("Navigating to Schools page");
+    navigate('/state-total-schools');
   };
 
   return (

@@ -1,0 +1,6 @@
+.State-Catalogue-Container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}   

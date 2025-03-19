@@ -1,0 +1,170 @@
+.State-Borrow-Return-Container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #EFFAF1, #7ecb89);
+}
+
+.State-Borrow-Return-Content {
+    display: flex;
+    flex: 1;
+}
+
+.State-Borrow-Return-Main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 60px; /* Space for navbar */
+    margin-left: 250px; /* Space for sidebar - adjust based on your sidebar width */
+}
+
+.State-Borrow-Return-Title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.State-Borrow-Return-Filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.State-Borrow-Return-Filter-Container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.State-Borrow-Return-Filter-Container label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.State-Borrow-Return-Filter-Select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.State-Borrow-Return-Filter-Select:focus {
+    border-color: #7ecb89;
+    box-shadow: 0 0 0 2px rgba(126, 203, 137, 0.2);
+}
+
+.State-Borrow-Return-Table-Container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.State-Borrow-Return-Table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.State-Borrow-Return-Table th,
+.State-Borrow-Return-Table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.State-Borrow-Return-Table th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: #333;
+}
+
+.State-Borrow-Return-Table tr:last-child td {
+    border-bottom: none;
+}
+
+.State-Borrow-Return-Table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.State-Borrow-Return-Status {
+    padding: 2px 6px;  /* Reduced from 4px 8px */
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    min-width: 82px;  /* Set a minimum width */
+    line-height: 1.2;  /* Reduced line height */
+}
+
+.State-Borrow-Return-Status.active {
+    color: #307733;
+    background-color: rgba(46, 125, 50, 0.1);
+}
+
+.State-Borrow-Return-Status.inactive {
+    color: #d32f2f;
+    background-color: rgba(211, 47, 47, 0.1);
+}
+
+.State-Borrow-Return-Pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.State-Borrow-Return-Pagination-Button {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.State-Borrow-Return-Pagination-Button:hover {
+    background-color: #f5f5f5;
+}
+
+.State-Borrow-Return-Pagination-Button.State-Borrow-Return-Active {
+    background-color: #7ecb89;
+    color: white;
+    border-color: #7ecb89;
+}
+
+.State-Borrow-Return-Pagination-Button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .State-Borrow-Return-Filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .State-Borrow-Return-Main {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    .State-Borrow-Return-Table th,
+    .State-Borrow-Return-Table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

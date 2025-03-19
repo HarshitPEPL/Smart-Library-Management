@@ -1,24 +1,24 @@
-.state-forget-requested-wrapper {
+.librarian-login-wrapper {
     display: flex;
     height: 100vh;
     background: linear-gradient(45deg, #EFFAF1, #7ecb89);
   }
   
-  .state-forget-requested-left {
+  .librarian-login-left {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .state-forget-requested-image {
+  .librarian-login-image {
     width: 60%;
     height: 80%;
     position: relative;
     right: 8rem;
   }
   
-  .state-forget-requested-right {
+  .librarian-login-right {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     font-family: 'Inter', sans-serif;
   }
   
-  .state-forget-requested-logo-image {
+  .librarian-login-logo-image {
     width: 100px;
     height: auto;
     display: block;
@@ -46,59 +46,37 @@
     bottom: 1rem;
   }
   
-  .state-forget-requested-subtitle {
+  .librarian-login-subtitle {
     font-size: 0.9rem;
     color: #4D4D4D;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: 'Inter', sans-serif;
     position: relative;
     bottom: 0.7rem;
+    white-space: nowrap;
   }
   
-  .state-forget-requested-subsubtitle {
+  .librarian-login-subsubtitle {
     font-size: 0.8rem;
     position: relative;
     bottom: 15px;
-    color: #246C3E;
+    color: #20812a;
     font-family: 'Inter', sans-serif;
     position: relative;
     bottom: 1.5rem;
   }
   
-  .state-forget-requested-form {
+  .librarian-login-form {
     width: 100%;
     max-width: 400px;
   }
   
-  .state-forget-requested-otp-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  }
-  
-  .state-forget-requested-otp-input {
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 1px solid #DCD9D9;
-    border-radius: 8px;
-    outline: none;
-    opacity: 0.8;
-  }
-  
-  .state-forget-requested-otp-input:focus {
-    border-color: #42bb4e;
-    box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
-  }
-  
-  .state-forget-requested-field {
+  .librarian-login-field {
     margin-bottom: 1.5rem;
-    color: #ba5151;
+    color: #4D4D4D;
   }
   
-  .state-forget-requested-label {
+  .librarian-login-label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -106,9 +84,10 @@
     font-size: 0.9rem;
   }
   
-  .state-forget-requested-input {
+  .librarian-login-input {
     width: 100%;
     padding: 0.75rem;
+    padding-right: 2.5rem;
     font-size: 0.8rem;
     border: 1px solid #DCD9D9;
     border-radius: 8px;
@@ -116,12 +95,46 @@
     opacity: 50%;
   }
   
-  .state-forget-requested-input:focus {
+  .librarian-login-input:focus {
     border-color: #42bb4e;
     box-shadow: 0 0 5px rgba(66, 187, 78, 0.5);
   }
   
-  .state-forget-requested-button {
+  .librarian-login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .librarian-login-rememberme input {
+    margin-right: 0.5rem;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .remember-text {
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .librarian-login-forgot {
+    color: #4D4D4D;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .librarian-login-forgot:hover {
+    text-decoration: underline;
+  }
+  
+  .librarian-login-button {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -131,24 +144,38 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-bottom: 1rem;
   }
   
-  .state-forget-requested-button:hover {
+  .librarian-login-button:hover {
     background-color: #20812a;
   }
   
-  .state-forget-requested-back {
-    text-align: center;
-    margin-top: 1rem;
+  .password-input-wrapper {
+    position: relative;
+    width: 100%;
   }
   
-  .state-forget-requested-back-link {
+  .password-toggle-button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #4D4D4D;
-    text-decoration: underline;
-    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
   }
   
-  .state-forget-requested-back-link:hover {
-    text-decoration: underline;
-  } 
+  .password-toggle-button:hover {
+    opacity: 1;
+  }
+  
+  .password-toggle-icon {
+    display: block;
+  }
