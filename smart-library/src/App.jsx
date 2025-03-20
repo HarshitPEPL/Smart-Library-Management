@@ -4,6 +4,7 @@ import StudentLogin from "./pages/StudentLogin/StudentLogin";
 import StudentForget from "./pages/StudentLogin/StudentForget";
 import StudentForgetRequested from "./pages/StudentLogin/StudentForgetRequested";
 import StudentDashboard from "./pages/StudentDashboard/StudentDashboard";
+import StudentRecommendedBooks from "./pages/StudentDashboard/StudentRecommendedBooks";
 import StudentEbooks from "./pages/StudentEbooks/StudentEbooks";
 import StudentAudiobooks from "./pages/StudentAudiobooks/StudentAudiobooks";
 import StudentNotes from "./pages/StudentNotes/StudentNotes";
@@ -56,6 +57,7 @@ function App() {
         <Route path="/forgot-password" element={<StudentForget />} />
         <Route path="/reset-requested" element={<StudentForgetRequested />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/student-recommended-books" element={<StudentRecommendedBooks />} />
         <Route path="/student-e-books" element={<StudentEbooks />} />
         <Route path="/student-audio-books" element={<StudentAudiobooks />} />
         <Route path="/student-visual-content" element={<StudentVC />} /> 

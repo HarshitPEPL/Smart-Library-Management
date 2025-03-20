@@ -29,7 +29,6 @@
   font-weight: bold;
   position: relative;
   left: 8.5rem;
-  
 }
 
 .StudentNotes-tabs {
@@ -47,7 +46,6 @@
   transition: all 0.2s ease;
   position: relative;
   left: 8rem;
-
 }
 
 .StudentNotes-button:hover {
@@ -107,7 +105,7 @@
   font-weight: 500;
 }
 
-.StudentNotes-course {
+.StudentNotes-published-by {
   font-size: 0.875rem;
   color: #6b7280;
 }
@@ -131,6 +129,39 @@
 .StudentNotes-expand-button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+/* Pagination styles */
+.StudentNotes-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.StudentNotes-pagination-button {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.StudentNotes-pagination-button:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.StudentNotes-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.StudentNotes-pagination-info {
+  font-size: 0.875rem;
+  color: #4b5563;
 }
 
 .StudentNotes-modal-overlay {

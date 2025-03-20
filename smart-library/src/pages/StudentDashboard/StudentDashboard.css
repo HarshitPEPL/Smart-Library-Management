@@ -23,7 +23,33 @@
   padding: 10 20px;
 }
 
+/* Section Header with See More */
+.StudentDashboard-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 10px;
+  margin-bottom: 15px;
+  position: sticky;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 10;
+  width: 100%;
+}
 
+.StudentDashboard-see-more {
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.StudentDashboard-see-more:hover {
+  color: #218838;
+  text-decoration: underline;
+}
 
 /* Announcements Card Styles */
 .StudentDashboard-announcements-card {
@@ -160,12 +186,9 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 0; /* Adjusted to work with the section header */
   padding-left: 10px;
-  position: sticky;
   margin-left: 1rem;
-  top: 0;
-  left: 0;
 }
 
 .StudentDashboard-recommended-grid {
@@ -254,12 +277,9 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 0; /* Adjusted to work with the section header */
   padding-left: 10px;
-  position: sticky;
   margin-left: 1rem;
-  top: 0;
-  left: 0;
 }
 
 .StudentDashboard-recent-grid {
@@ -348,12 +368,9 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 0; /* Adjusted to work with the section header */
   padding-left: 10px;
-  position: sticky;
   margin-left: 1rem;
-  top: 0;
-  left: 0;
 }
 
 .StudentDashboard-academicbook-grid {
@@ -443,12 +460,9 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 0; /* Adjusted to work with the section header */
   padding-left: 10px;
-  position: sticky;
   margin-left: 1rem;
-  top: 0;
-  left: 0;
 }
 
 .StudentDashboard-nonacademicbook-grid {
